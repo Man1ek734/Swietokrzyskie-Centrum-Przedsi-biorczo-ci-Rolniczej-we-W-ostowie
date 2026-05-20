@@ -1,0 +1,1 @@
+# Swietokrzyskie-Centrum-Przedsi-biorczo-ci-Rolniczej-we-W-ostowie
