@@ -3,75 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt - Starostwo Opatowskie</title>
+  <title>Kontakt</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #0b2447;
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    .box {
-      max-width: 700px;
-      margin: 80px auto;
-      background: white;
-      padding: 50px;
-      border-radius: 35px;
-      text-align: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+    body{
+      font-family:Arial,sans-serif;
+      background:#f5f7fb;
+      color:#0b2447;
     }
 
-    img {
-      width: 160px;
-      margin-bottom: 25px;
+    .container{
+      max-width:900px;
+      margin:60px auto;
+      background:white;
+      border-radius:40px;
+      padding:60px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.1);
+      text-align:center;
     }
 
-    h1 {
-      color: #003b7a;
-      font-size: 36px;
-      margin-bottom: 25px;
+    .herb{
+      width:170px;
+      margin-bottom:30px;
     }
 
-    p {
-      font-size: 22px;
-      margin: 18px 0;
+    h1{
+      font-size:52px;
+      color:#003b7a;
+      margin-bottom:30px;
     }
 
-    a {
-      color: white;
-      background: #e9a722;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 20px;
+    h2{
+      font-size:38px;
+      color:#003b7a;
+      margin-bottom:25px;
     }
 
-    .back {
-      background: #003b7a;
-      margin-right: 10px;
+    p{
+      font-size:24px;
+      margin-bottom:20px;
+      line-height:1.7;
     }
+
+    .buttons{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:30px;
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      transition:all 0.3s ease;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+    }
+
+    .blue{
+      background:#003b7a;
+    }
+
+    .gold{
+      background:#e9a722;
+    }
+
+    .facebook{
+      background:#1877f2;
+    }
+
+    hr{
+      margin:50px 0;
+      border:none;
+      height:2px;
+      background:#e5e7eb;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="box">
-    <img src="herb.png">
+<div class="container">
 
-    <h1>Starostwo Opatowskie</h1>
+  <img
+    src="POL_powiat_opatowski_COA.svg.png"
+    class="herb"
+    alt="Herb Powiatu Opatowskiego"
+  >
 
-    <p><strong>Nr Tel:</strong> 15 868 29 71</p>
+  <h1>Starostwo Opatowskie</h1>
 
-    <a class="back" href="index.html">Wróć</a>
+  <p>
+    <strong>Nr Tel:</strong>
+    15 868 29 71
+  </p>
 
-    <a href="https://www.facebook.com/PowiatOpatowski" target="_blank">
+  <div class="buttons">
+
+    <a href="index.html" class="btn blue">
+      Wróć
+    </a>
+
+    <a
+      href="https://www.facebook.com/PowiatOpatowski"
+      target="_blank"
+      class="btn gold"
+    >
       Facebook Starostwa
     </a>
+
   </div>
+
+  <hr>
+
+  <h2>Tomasz Staniek</h2>
+
+  <p>
+    <strong>Nr Tel:</strong>
+    605 352 061
+  </p>
+
+  <div class="buttons">
+
+    <a
+      href="https://www.facebook.com/tomasz.staniek.1"
+      target="_blank"
+      class="btn facebook"
+    >
+      Facebook Tomasz Staniek
+    </a>
+
+  </div>
+
+</div>
 
 </body>
 </html>
