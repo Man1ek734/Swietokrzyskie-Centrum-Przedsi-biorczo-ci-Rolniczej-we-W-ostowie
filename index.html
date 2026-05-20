@@ -31,32 +31,38 @@
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .logo img{
-      height:85px;
-      width:auto;
-      display:block;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:18px;
     }
-.logo{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  flex-direction:row;
-}
 
-.logo-text h1{
-  color:#3b5bd6;
-  font-size:42px;
-  margin:0;
-  line-height:1;
-}
+    .logo img{
+      height:90px;
+      width:auto;
+    }
 
-.logo-text p{
-  margin:0;
-  font-size:17px;
-  color:#444;
-  line-height:1.2;
-  letter-spacing:1px;
-}
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .big-text{
+      color:#3b5bd6;
+      font-size:52px;
+      font-weight:bold;
+      line-height:1;
+    }
+
+    .small-text{
+      color:#444;
+      font-size:20px;
+      line-height:1.1;
+      letter-spacing:1px;
+      margin-top:4px;
+    }
+
     nav{
       display:flex;
       align-items:center;
@@ -288,20 +294,24 @@
 
 <header>
 
-<div class="logo">
+  <div class="logo">
 
-  <img src="logo.png.png" alt="Logo Starostwa">
+    <img src="logo.png.png" alt="Logo Starostwa">
 
-  <div class="logo-text">
-    <h1>Opatów</h1>
+    <div class="logo-text">
 
-    <p>
-      STAROSTWO<br>
-      POWIATOWE
-    </p>
+      <div class="big-text">
+        Opatów
+      </div>
+
+      <div class="small-text">
+        STAROSTWO<br>
+        POWIATOWE
+      </div>
+
+    </div>
+
   </div>
-
-</div>
 
   <nav>
     <a href="index.html">Strona główna</a>
