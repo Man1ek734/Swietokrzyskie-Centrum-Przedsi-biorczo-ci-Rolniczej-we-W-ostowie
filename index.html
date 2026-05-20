@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Świętokrzyskie Centrum</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #0b2447;
+    }
+
+    header {
+      margin: 25px auto;
+      max-width: 1150px;
+      background: white;
+      border-radius: 35px;
+      padding: 18px 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #003b7a;
+      font-size: 22px;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #0b2447;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: #e9a722;
+      color: white;
+      padding: 13px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: 20px auto;
+      border-radius: 55px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #003b7a, #0057a8);
+      color: white;
+      display: flex;
+      min-height: 430px;
+    }
+
+    .hero-text {
+      width: 50%;
+      padding: 70px;
+    }
+
+    .hero-text h1 {
+      font-size: 54px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span {
+      color: #e9a722;
+    }
+
+    .hero-text p {
+      font-size: 19px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .hero-image {
+      width: 50%;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 180px;
+      border-bottom-left-radius: 180px;
+    }
+
+    section {
+      max-width: 1150px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 34px;
+      color: #003b7a;
+      margin-bottom: 15px;
+    }
+
+    .cards {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .icon {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: #e8f1fb;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+
+    .banner {
+      max-width: 1150px;
+      margin: 50px auto;
+      border-radius: 40px;
+      background: linear-gradient(135deg, #003b7a, #0057a8);
+      color: white;
+      padding: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .banner h2 {
+      color: white;
+      font-size: 36px;
+    }
+
+    .banner span {
+      color: #e9a722;
+    }
+
+    footer {
+      max-width: 1150px;
+      margin: 60px auto 25px;
+      background: #003b7a;
+      color: white;
+      border-radius: 45px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    footer p {
+      margin-top: 10px;
+      color: #dbeafe;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-text,
+      .hero-image {
+        width: 100%;
+      }
+
+      .hero-image {
+        height: 260px;
+        border-radius: 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .banner {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Świętokrzyskie Centrum</div>
+
+  <nav>
+    <a href="#">Strona główna</a>
+    <a href="#">O nas</a>
+    <a href="#">Oferta</a>
+    <a href="#">Kontakt</a>
+  </nav>
+
+  <a href="#" class="btn">Skontaktuj się</a>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Świętokrzyskie Centrum</h1>
+    <h2><span>Przedsiębiorczości i Rolnictwa</span></h2>
+    <p>
+      Wspieramy rozwój przedsiębiorczości, rolnictwa oraz lokalnej społeczności
+      w powiecie opatowskim.
+    </p>
+    <a href="#" class="btn">Dowiedz się więcej</a>
+  </div>
+
+  <div class="hero-image"></div>
+</div>
+
+<section>
+  <h2>Nasza misja</h2>
+  <p>
+    Naszą misją jest wspieranie przedsiębiorców, rolników oraz mieszkańców
+    w rozwoju poprzez doradztwo, szkolenia i dostęp do nowoczesnych narzędzi.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">👥</div>
+      <h3>Wsparcie dla przedsiębiorców</h3>
+      <p>Pomagamy w zakładaniu i rozwijaniu działalności gospodarczej.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌱</div>
+      <h3>Rolnictwo i środowisko</h3>
+      <p>Wspieramy rolników oraz ekologiczne rozwiązania.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎓</div>
+      <h3>Szkolenia i doradztwo</h3>
+      <p>Organizujemy szkolenia, warsztaty oraz konsultacje.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Współpraca</h3>
+      <p>Łączymy lokalne instytucje, firmy i mieszkańców regionu.</p>
+    </div>
+  </div>
+</section>
+
+<div class="banner">
+  <div>
+    <h2>Działamy dla powiatu <span>opatowskiego</span></h2>
+    <p>Razem budujemy silny, nowoczesny i przyjazny mieszkańcom region.</p>
+  </div>
+
+  <a href="#" class="btn">Kontakt</a>
+</div>
+
+<footer>
+  <h3>Świętokrzyskie Centrum Przedsiębiorczości i Rolnictwa</h3>
+  <p>ul. Henryka Sienkiewicza 17, 27-500 Opatów</p>
+  <p>© 2025 Wszystkie prawa zastrzeżone</p>
+</footer>
+
+</body>
+</html>
