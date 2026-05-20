@@ -36,11 +36,19 @@
       font-size: 22px;
     }
 
-    nav a {
-      margin: 0 14px;
-      text-decoration: none;
-      color: #0b2447;
-      font-weight: bold;
+nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #0b2447;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover {
+  transform: scale(1.18);
+  color: #e9a722;
+}
     }
 
     .btn {
