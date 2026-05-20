@@ -6,63 +6,189 @@
   <title>O nas</title>
 
   <style>
-    body{
+
+    *{
       margin:0;
-      font-family:Arial, sans-serif;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
       background:#f5f7fb;
       color:#0b2447;
     }
 
-    .container{
-      max-width:1000px;
-      margin:60px auto;
+    header{
+      max-width:1200px;
+      margin:25px auto;
       background:white;
       border-radius:40px;
-      padding:50px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.1);
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
-    h1{
-      text-align:center;
-      color:#003b7a;
-      font-size:48px;
-      margin-bottom:30px;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:18px;
     }
 
-    img{
-      display:block;
-      margin:0 auto 30px;
-      width:170px;
+    .logo img{
+      height:90px;
+      width:auto;
     }
 
-    p{
-      font-size:21px;
-      line-height:1.8;
-      margin-bottom:25px;
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .big-text{
+      color:#3b5bd6;
+      font-size:52px;
+      font-weight:bold;
+      line-height:1;
+    }
+
+    .small-text{
+      color:#444;
+      font-size:20px;
+      line-height:1.1;
+      letter-spacing:1px;
+      margin-top:4px;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:45px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#0b2447;
+      font-weight:bold;
+      font-size:19px;
+      transition:all 0.3s ease;
+      display:inline-block;
+      padding:10px 15px;
+      border-radius:15px;
+    }
+
+    nav a:hover{
+      transform:scale(1.12);
+      color:#e9a722;
+      background:#f5f7fb;
     }
 
     .btn{
-      display:inline-block;
-      margin-top:20px;
       background:#e9a722;
       color:white;
-      padding:15px 30px;
-      border-radius:30px;
       text-decoration:none;
+      padding:15px 30px;
+      border-radius:35px;
       font-weight:bold;
+      transition:all 0.3s ease;
+      display:inline-block;
     }
 
-    .center{
-      text-align:center;
+    .btn:hover{
+      transform:scale(1.08);
     }
+
+    .container{
+      max-width:1200px;
+      margin:40px auto;
+      background:white;
+      border-radius:45px;
+      padding:60px;
+      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+    }
+
+    .container h1{
+      text-align:center;
+      color:#003b7a;
+      font-size:56px;
+      margin-bottom:40px;
+    }
+
+    .container p{
+      font-size:24px;
+      line-height:1.9;
+      margin-bottom:30px;
+    }
+
+    .back{
+      text-align:center;
+      margin-top:50px;
+    }
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .container{
+        padding:35px;
+      }
+
+      .container h1{
+        font-size:42px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-  <img src="DOKLADNA-NAZWA-TWOJEGO-PLIKU.svg" alt="Herb Powiatu Opatowskiego">
+  <div class="logo">
+
+    <img src="logo.png.png" alt="Logo Starostwa">
+
+    <div class="logo-text">
+
+      <div class="big-text">
+        Opatów
+      </div>
+
+      <div class="small-text">
+        STAROSTWO<br>
+        POWIATOWE
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="onas.html">O nas</a>
+    <a href="#">Oferta</a>
+  </nav>
+
+  <a href="kontakt.html" class="btn">
+    Skontaktuj się
+  </a>
+
+</header>
+
+<div class="container">
 
   <h1>O nas</h1>
 
@@ -82,8 +208,12 @@
     z lokalnymi instytucjami dla dobra mieszkańców.
   </p>
 
-  <div class="center">
-    <a href="index.html" class="btn">Powrót na stronę główną</a>
+  <div class="back">
+
+    <a href="index.html" class="btn">
+      Powrót na stronę główną
+    </a>
+
   </div>
 
 </div>
