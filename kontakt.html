@@ -19,35 +19,112 @@
       color:#0b2447;
     }
 
-    .container{
-      max-width:950px;
-      margin:60px auto;
+    header{
+      max-width:1200px;
+      margin:25px auto;
       background:white;
       border-radius:40px;
+      padding:18px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .logo img{
+      height:90px;
+      width:auto;
+    }
+
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .big-text{
+      color:#3b5bd6;
+      font-size:52px;
+      font-weight:bold;
+      line-height:1;
+    }
+
+    .small-text{
+      color:#444;
+      font-size:20px;
+      line-height:1.1;
+      letter-spacing:1px;
+      margin-top:4px;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:45px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#0b2447;
+      font-weight:bold;
+      font-size:19px;
+      transition:all 0.3s ease;
+      display:inline-block;
+      padding:10px 15px;
+      border-radius:15px;
+    }
+
+    nav a:hover{
+      transform:scale(1.12);
+      color:#e9a722;
+      background:#f5f7fb;
+    }
+
+    .btn{
+      background:#e9a722;
+      color:white;
+      text-decoration:none;
+      padding:15px 30px;
+      border-radius:35px;
+      font-weight:bold;
+      transition:all 0.3s ease;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+    }
+
+    .container{
+      max-width:950px;
+      margin:40px auto;
+      background:white;
+      border-radius:45px;
       padding:60px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.1);
+      box-shadow:0 12px 35px rgba(0,0,0,0.08);
       text-align:center;
     }
 
-    .herb{
-      width:170px;
+    h1{
+      font-size:56px;
+      color:#003b7a;
       margin-bottom:30px;
     }
 
-    h1{
-      font-size:54px;
-      color:#003b7a;
-      margin-bottom:35px;
-    }
-
     h2{
-      font-size:42px;
+      font-size:44px;
       color:#003b7a;
       margin-bottom:25px;
     }
 
     p{
-      font-size:26px;
+      font-size:25px;
       margin-bottom:25px;
       line-height:1.7;
     }
@@ -58,25 +135,6 @@
       gap:20px;
       flex-wrap:wrap;
       margin-top:25px;
-    }
-
-    .btn{
-      padding:16px 34px;
-      border-radius:35px;
-      text-decoration:none;
-      color:white;
-      font-weight:bold;
-      transition:all 0.3s ease;
-      display:inline-block;
-      font-size:18px;
-    }
-
-    .btn:hover{
-      transform:scale(1.08);
-    }
-
-    .gold{
-      background:#e9a722;
     }
 
     .facebook{
@@ -98,18 +156,67 @@
       margin-top:60px;
     }
 
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .container{
+        padding:35px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-  <img
-    src="POL_powiat_opatowski_COA.svg.png"
-    class="herb"
-    alt="Herb Powiatu Opatowskiego"
-  >
+  <div class="logo">
+
+    <img src="logo.png.png" alt="Logo Starostwa">
+
+    <div class="logo-text">
+
+      <div class="big-text">
+        Opatów
+      </div>
+
+      <div class="small-text">
+        STAROSTWO<br>
+        POWIATOWE
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav>
+    <a href="index.html">Strona główna</a>
+    <a href="onas.html">O nas</a>
+    <a href="#">Oferta</a>
+  </nav>
+
+  <a href="kontakt.html" class="btn">
+    Skontaktuj się
+  </a>
+
+</header>
+
+<div class="container">
 
   <h1>Starostwo Opatowskie</h1>
 
@@ -123,7 +230,7 @@
     <a
       href="https://www.facebook.com/PowiatOpatowski"
       target="_blank"
-      class="btn gold"
+      class="btn"
     >
       Facebook Starostwa
     </a>
