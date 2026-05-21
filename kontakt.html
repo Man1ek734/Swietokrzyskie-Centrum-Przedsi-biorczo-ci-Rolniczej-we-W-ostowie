@@ -50,17 +50,16 @@
     }
 
     .big-text{
-      color:#3b5bd6;
-      font-size:42px;
+      color:#003b7a;
+      font-size:32px;
       font-weight:bold;
-      line-height:1;
+      line-height:1.1;
     }
 
     .small-text{
       color:#444;
-      font-size:16px;
+      font-size:22px;
       line-height:1.1;
-      letter-spacing:1px;
       margin-top:4px;
     }
 
@@ -105,59 +104,107 @@
       box-shadow:0 10px 25px rgba(233,167,34,0.4);
     }
 
-    .facebook{
-      background:#1877f2;
+    .hero{
+      max-width:1450px;
+      margin:20px auto;
+      border-radius:55px;
+      overflow:hidden;
+      display:flex;
+      background:linear-gradient(135deg,#003b7a,#0057a8);
+      color:white;
+      min-height:500px;
+    }
+
+    .hero-text{
+      width:50%;
+      padding:75px;
+    }
+
+    .label{
+      color:#e9a722;
+      font-weight:bold;
+      font-size:18px;
+      margin-bottom:25px;
+      text-transform:uppercase;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      line-height:1.15;
+      margin-bottom:30px;
+    }
+
+    .line{
+      width:80px;
+      height:4px;
+      background:#e9a722;
+      border-radius:10px;
+      margin-bottom:30px;
+    }
+
+    .hero-text p{
+      font-size:23px;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .hero-image{
+      width:50%;
+      background:
+      linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),
+      url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80");
+
+      background-size:cover;
+      background-position:center;
+      border-top-left-radius:180px;
+      border-bottom-left-radius:180px;
     }
 
     .contact-section{
       max-width:1450px;
-      margin:30px auto;
+      margin:70px auto;
+      padding:0 20px;
+    }
+
+    .contact-card{
       background:white;
-      border-radius:55px;
-      padding:80px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+      border-radius:35px;
+      padding:45px;
       text-align:center;
+      margin-bottom:35px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      transition:all 0.3s ease;
     }
 
-    .contact-section h1{
-      font-size:64px;
+    .contact-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .contact-card h2{
       color:#003b7a;
-      margin-bottom:50px;
-    }
-
-    .contact-box{
-      margin-bottom:60px;
-    }
-
-    .contact-box h2{
-      font-size:42px;
-      color:#003b7a;
+      font-size:40px;
       margin-bottom:10px;
     }
 
     .position{
-      font-size:22px;
       color:#64748b;
+      font-size:22px;
       margin-bottom:20px;
     }
 
-    .contact-box p{
+    .contact-card p{
       font-size:24px;
       margin-bottom:25px;
-      line-height:1.8;
     }
 
-    hr{
-      margin:60px 0;
-      border:none;
-      height:2px;
-      background:#e5e7eb;
+    .facebook{
+      background:#1877f2;
     }
 
     .bottom-text{
       font-size:22px;
       color:#64748b;
-      margin-top:10px;
+      margin-top:15px;
     }
 
     footer{
@@ -187,20 +234,22 @@
         justify-content:center;
       }
 
-      .contact-section{
-        padding:40px;
+      .hero{
+        flex-direction:column;
       }
 
-      .contact-section h1{
-        font-size:44px;
+      .hero-text,
+      .hero-image{
+        width:100%;
       }
 
-      .contact-box h2{
-        font-size:32px;
+      .hero-image{
+        height:300px;
+        border-radius:0;
       }
 
-      .contact-box p{
-        font-size:20px;
+      .hero-text h1{
+        font-size:40px;
       }
 
     }
@@ -217,23 +266,15 @@
     <img src="logo.png.png" alt="Logo Starostwa">
 
     <div class="logo-text">
-
-      <div class="big-text">
-        Opatów
-      </div>
-
-      <div class="small-text">
-        STAROSTWO<br>
-        POWIATOWE
-      </div>
-
+      <div class="big-text">Starostwo Powiatowe</div>
+      <div class="small-text">w Opatowie</div>
     </div>
 
   </a>
 
   <nav>
     <a href="onas.html">O nas</a>
-    <a href="#">Inkubator Przemysłowy</a>
+    <a href="inkubator.html">Inkubator Przemysłowy</a>
     <a href="#">Manufaktura</a>
   </nav>
 
@@ -243,11 +284,32 @@
 
 </header>
 
+<div class="hero">
+
+  <div class="hero-text">
+
+    <div class="label">Kontakt</div>
+
+    <h1>Skontaktuj się z nami</h1>
+
+    <div class="line"></div>
+
+    <p>
+      Jesteśmy do dyspozycji mieszkańców
+      oraz przedsiębiorców Powiatu Opatowskiego.
+      Skontaktuj się z nami telefonicznie
+      lub poprzez media społecznościowe.
+    </p>
+
+  </div>
+
+  <div class="hero-image"></div>
+
+</div>
+
 <div class="contact-section">
 
-  <h1>Kontakt</h1>
-
-  <div class="contact-box">
+  <div class="contact-card">
 
     <h2>Starostwo Powiatowe w Opatowie</h2>
 
@@ -266,9 +328,7 @@
 
   </div>
 
-  <hr>
-
-  <div class="contact-box">
+  <div class="contact-card">
 
     <h2>Tomasz Staniek</h2>
 
@@ -291,9 +351,7 @@
 
   </div>
 
-  <hr>
-
-  <div class="contact-box">
+  <div class="contact-card">
 
     <h2>Małgorzata Jalowska</h2>
 
@@ -316,9 +374,7 @@
 
   </div>
 
-  <hr>
-
-  <div class="contact-box">
+  <div class="contact-card">
 
     <h2>Danuta Heba</h2>
 
@@ -337,17 +393,11 @@
 
 <footer>
 
-  <h3>
-    Starostwo Powiatowe w Opatowie
-  </h3>
+  <h3>Starostwo Powiatowe w Opatowie</h3>
 
-  <p>
-    Powiat Opatowski
-  </p>
+  <p>Powiat Opatowski</p>
 
-  <p>
-    © 2025 Wszystkie prawa zastrzeżone
-  </p>
+  <p>© 2025 Wszystkie prawa zastrzeżone</p>
 
 </footer>
 
