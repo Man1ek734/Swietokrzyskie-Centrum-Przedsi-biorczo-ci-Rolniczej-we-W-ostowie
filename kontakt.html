@@ -33,11 +33,14 @@ header{
   text-decoration:none;
 }
 
-.logo img{height:75px}
+.logo img{
+  height:75px;
+  width:auto;
+}
 
 .big-text{
   color:#003b7a;
-  font-size:32px;
+  font-size:34px;
   font-weight:bold;
 }
 
@@ -84,16 +87,17 @@ nav a{
 
 .hero-left{
   width:50%;
-  padding:60px;
+  padding:65px;
 }
 
 .hero-left span{
   color:#f0b323;
   font-weight:bold;
+  font-size:20px;
 }
 
 .hero-left h1{
-  font-size:62px;
+  font-size:64px;
   line-height:1.1;
   margin:25px 0;
 }
@@ -107,7 +111,7 @@ nav a{
 }
 
 .hero-left p{
-  font-size:22px;
+  font-size:23px;
   line-height:1.8;
 }
 
@@ -126,7 +130,6 @@ nav a{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:28px;
-  align-items:stretch;
 }
 
 .card{
@@ -135,17 +138,11 @@ nav a{
   padding:38px 24px;
   text-align:center;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  min-height:360px;
+  min-height:370px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:space-between;
-}
-
-.card-top{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
 }
 
 .icon{
@@ -156,7 +153,7 @@ nav a{
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:20px;
+  margin:0 auto 20px;
   font-size:34px;
 }
 
@@ -169,8 +166,8 @@ nav a{
 
 .position{
   color:#555;
-  font-size:19px;
-  min-height:28px;
+  font-size:20px;
+  min-height:30px;
 }
 
 .gold-line{
@@ -189,16 +186,12 @@ nav a{
 .card .btn{
   font-size:15px;
   padding:13px 20px;
-  max-width:100%;
 }
 
-.bottom{
-  width:100%;
-  margin-top:18px;
-  padding-top:18px;
-  border-top:1px solid #ddd;
+.bottom-text{
   color:#555;
   font-size:20px;
+  min-height:30px;
 }
 
 footer{
@@ -211,18 +204,22 @@ footer{
   padding:40px;
 }
 
+footer h3{
+  font-size:28px;
+}
+
 footer p{
   margin-top:12px;
   color:#dbeafe;
 }
 
 @media(max-width:1200px){
-  .contacts{grid-template-columns:1fr}
   header{flex-direction:column;gap:20px}
   nav{flex-wrap:wrap;justify-content:center}
   .hero{flex-direction:column}
   .hero-left,.hero-right{width:100%}
   .hero-right{height:300px;border-radius:0}
+  .contacts{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -231,7 +228,7 @@ footer p{
 
 <header>
   <a href="index.html" class="logo">
-    <img src="logo.png.png" alt="Logo">
+    <img src="logo.png.png" alt="Logo Starostwa">
     <div class="logo-text">
       <div class="big-text">Starostwo Powiatowe</div>
       <div class="small-text">w Opatowie</div>
@@ -258,53 +255,59 @@ footer p{
       lub poprzez media społecznościowe.
     </p>
   </div>
+
   <div class="hero-right"></div>
 </div>
 
 <div class="contacts">
 
   <div class="card">
-    <div class="card-top">
+    <div>
       <div class="icon">📞</div>
       <h2>Starostwo Powiatowe<br>w Opatowie</h2>
       <div class="position"></div>
       <div class="gold-line"></div>
       <p><strong>Nr Tel:</strong> 15 868 29 71</p>
     </div>
-    <a href="https://www.facebook.com/PowiatOpatowski" target="_blank" class="btn">Facebook Starostwa</a>
+    <a href="https://www.facebook.com/PowiatOpatowski" target="_blank" class="btn">
+      Facebook Starostwa
+    </a>
   </div>
 
   <div class="card">
-    <div class="card-top">
+    <div>
       <div class="icon">👤</div>
       <h2>Tomasz Staniek</h2>
       <div class="position">starosta opatowski</div>
       <div class="gold-line"></div>
       <p><strong>Nr Tel:</strong> 15 83 13 540</p>
     </div>
-    <a href="https://www.facebook.com/tomasz.staniek.1" target="_blank" class="btn fb">Facebook Tomasz Staniek</a>
+    <a href="https://www.facebook.com/tomasz.staniek.1" target="_blank" class="btn fb">
+      Facebook Tomasz Staniek
+    </a>
   </div>
 
   <div class="card">
-    <div class="card-top">
+    <div>
       <div class="icon">👤</div>
       <h2>Małgorzata Jalowska</h2>
       <div class="position">wicestarosta</div>
       <div class="gold-line"></div>
       <p><strong>Nr Tel:</strong> 15 83 13 540</p>
     </div>
-    <a href="https://www.facebook.com/jalowskamalgorzata" target="_blank" class="btn fb">Facebook Małgorzata Jalowska</a>
+    <a href="https://www.facebook.com/jalowskamalgorzata" target="_blank" class="btn fb">
+      Facebook Małgorzata Jalowska
+    </a>
   </div>
 
   <div class="card">
-    <div class="card-top">
+    <div>
       <div class="icon">📞</div>
       <h2>Danuta Heba</h2>
-      <div class="position"></div>
+      <div class="bottom-text">Inkubator Przemysłowy</div>
       <div class="gold-line"></div>
       <p><strong>Nr Tel:</strong> 797 994 760</p>
     </div>
-    <div class="bottom">Inkubator Przemysłowy</div>
   </div>
 
 </div>
