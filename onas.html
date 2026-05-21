@@ -20,11 +20,11 @@
     }
 
     header{
-      max-width:1200px;
+      max-width:1450px;
       margin:25px auto;
       background:white;
       border-radius:40px;
-      padding:18px 40px;
+      padding:20px 45px;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -35,10 +35,11 @@
       display:flex;
       align-items:center;
       gap:18px;
+      text-decoration:none;
     }
 
     .logo img{
-      height:90px;
+      height:75px;
       width:auto;
     }
 
@@ -50,14 +51,14 @@
 
     .big-text{
       color:#3b5bd6;
-      font-size:52px;
+      font-size:42px;
       font-weight:bold;
       line-height:1;
     }
 
     .small-text{
       color:#444;
-      font-size:20px;
+      font-size:16px;
       line-height:1.1;
       letter-spacing:1px;
       margin-top:4px;
@@ -66,22 +67,23 @@
     nav{
       display:flex;
       align-items:center;
-      gap:45px;
+      gap:28px;
     }
 
     nav a{
       text-decoration:none;
       color:#0b2447;
       font-weight:bold;
-      font-size:19px;
+      font-size:18px;
       transition:all 0.3s ease;
       display:inline-block;
-      padding:10px 15px;
+      padding:10px 14px;
       border-radius:15px;
+      white-space:nowrap;
     }
 
     nav a:hover{
-      transform:scale(1.12);
+      transform:scale(1.08);
       color:#e9a722;
       background:#f5f7fb;
     }
@@ -90,41 +92,107 @@
       background:#e9a722;
       color:white;
       text-decoration:none;
-      padding:15px 30px;
+      padding:15px 28px;
       border-radius:35px;
       font-weight:bold;
       transition:all 0.3s ease;
       display:inline-block;
+      white-space:nowrap;
     }
 
     .btn:hover{
       transform:scale(1.08);
+      box-shadow:0 10px 25px rgba(233,167,34,0.4);
     }
 
-    .container{
-      max-width:1200px;
-      margin:40px auto;
+    .about-section{
+      max-width:1450px;
+      margin:30px auto;
       background:white;
-      border-radius:45px;
-      padding:70px;
+      border-radius:55px;
+      padding:80px;
       box-shadow:0 12px 35px rgba(0,0,0,0.08);
     }
 
-    .container h1{
+    .about-section h1{
       text-align:center;
+      font-size:64px;
       color:#003b7a;
-      font-size:58px;
-      margin-bottom:45px;
+      margin-bottom:50px;
     }
 
-    .container p{
+    .about-section p{
       font-size:24px;
       line-height:2;
-      margin-bottom:35px;
       color:#1e293b;
+      margin-bottom:35px;
     }
 
-    @media(max-width:900px){
+    .highlight{
+      color:#e9a722;
+      font-weight:bold;
+    }
+
+    .cards{
+      margin-top:60px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    .card{
+      background:#f8fbff;
+      border-radius:35px;
+      padding:40px 30px;
+      text-align:center;
+      transition:all 0.3s ease;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .icon{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      background:#edf4ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 25px;
+      font-size:40px;
+    }
+
+    .card h3{
+      color:#003b7a;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .card p{
+      font-size:19px;
+      line-height:1.8;
+      margin:0;
+    }
+
+    footer{
+      max-width:1450px;
+      margin:60px auto 25px;
+      background:#003b7a;
+      color:white;
+      border-radius:45px;
+      padding:50px;
+      text-align:center;
+    }
+
+    footer p{
+      margin-top:12px;
+      color:#dbeafe;
+    }
+
+    @media(max-width:1100px){
 
       header{
         flex-direction:column;
@@ -136,16 +204,20 @@
         justify-content:center;
       }
 
-      .container{
-        padding:35px;
+      .about-section{
+        padding:40px;
       }
 
-      .container h1{
-        font-size:42px;
+      .about-section h1{
+        font-size:44px;
       }
 
-      .container p{
+      .about-section p{
         font-size:20px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
       }
 
     }
@@ -157,7 +229,7 @@
 
 <header>
 
-  <div class="logo">
+  <a href="index.html" class="logo">
 
     <img src="logo.png.png" alt="Logo Starostwa">
 
@@ -174,12 +246,12 @@
 
     </div>
 
-  </div>
+  </a>
 
   <nav>
-    <a href="index.html">Strona główna</a>
     <a href="onas.html">O nas</a>
-    <a href="#">Oferta</a>
+    <a href="#">Inkubator Przemysłowy</a>
+    <a href="#">Manufaktura</a>
   </nav>
 
   <a href="kontakt.html" class="btn">
@@ -188,25 +260,29 @@
 
 </header>
 
-<div class="container">
+<div class="about-section">
 
   <h1>O nas</h1>
 
   <p>
     Starostwo Powiatowe w Opatowie to jednostka samorządu
     terytorialnego działająca na rzecz mieszkańców Powiatu
-    Opatowskiego. Naszym celem jest sprawna obsługa mieszkańców,
+    Opatowskiego.
+  </p>
+
+  <p>
+    Naszym celem jest
+    <span class="highlight">
+      sprawna obsługa mieszkańców,
+    </span>
     rozwój lokalnej społeczności oraz realizacja zadań publicznych
     w zakresie administracji, edukacji, infrastruktury,
     ochrony środowiska i bezpieczeństwa.
   </p>
 
   <p>
-    Dbamy o przejrzystość działania urzędu, dostępność usług
-    oraz nowoczesną komunikację z mieszkańcami. Na naszej stronie
-    internetowej znajdą Państwo najważniejsze informacje dotyczące
-    pracy starostwa, aktualności, ogłoszenia, dokumenty oraz
-    sprawy urzędowe.
+    Dbamy o przejrzystość działania urzędu,
+    dostępność usług oraz nowoczesną komunikację z mieszkańcami.
   </p>
 
   <p>
@@ -214,11 +290,63 @@
     wspierając inicjatywy społeczne, kulturalne i gospodarcze regionu.
   </p>
 
-  <p>
-    Zapraszamy do kontaktu oraz korzystania z naszych usług.
-  </p>
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">🏛️</div>
+
+      <h3>Administracja</h3>
+
+      <p>
+        Sprawna i nowoczesna obsługa mieszkańców powiatu.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Rozwój Regionu</h3>
+
+      <p>
+        Wspieramy lokalne inicjatywy oraz rozwój gospodarczy.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Współpraca</h3>
+
+      <p>
+        Łączymy mieszkańców, przedsiębiorców i instytucje.
+      </p>
+
+    </div>
+
+  </div>
 
 </div>
+
+<footer>
+
+  <h3>
+    Starostwo Powiatowe w Opatowie
+  </h3>
+
+  <p>
+    Powiat Opatowski
+  </p>
+
+  <p>
+    © 2025 Wszystkie prawa zastrzeżone
+  </p>
+
+</footer>
 
 </body>
 </html>
