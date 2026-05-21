@@ -50,17 +50,16 @@
     }
 
     .big-text{
-      color:#3b5bd6;
-      font-size:42px;
+      color:#003b7a;
+      font-size:32px;
       font-weight:bold;
-      line-height:1;
+      line-height:1.1;
     }
 
     .small-text{
       color:#444;
-      font-size:16px;
+      font-size:22px;
       line-height:1.1;
-      letter-spacing:1px;
       margin-top:4px;
     }
 
@@ -105,48 +104,95 @@
       box-shadow:0 10px 25px rgba(233,167,34,0.4);
     }
 
-    .about-section{
+    .hero{
       max-width:1450px;
-      margin:30px auto;
-      background:white;
+      margin:20px auto;
       border-radius:55px;
-      padding:80px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.08);
+      overflow:hidden;
+      display:flex;
+      background:linear-gradient(135deg,#003b7a,#0057a8);
+      color:white;
+      min-height:520px;
     }
 
-    .about-section h1{
-      text-align:center;
-      font-size:64px;
-      color:#003b7a;
-      margin-bottom:50px;
+    .hero-text{
+      width:50%;
+      padding:75px;
     }
 
-    .about-section p{
-      font-size:24px;
-      line-height:2;
-      color:#1e293b;
-      margin-bottom:35px;
-    }
-
-    .highlight{
+    .label{
       color:#e9a722;
       font-weight:bold;
+      font-size:18px;
+      margin-bottom:25px;
+      text-transform:uppercase;
+    }
+
+    .hero-text h1{
+      font-size:58px;
+      line-height:1.15;
+      margin-bottom:30px;
+    }
+
+    .line{
+      width:80px;
+      height:4px;
+      background:#e9a722;
+      border-radius:10px;
+      margin-bottom:30px;
+    }
+
+    .hero-text p{
+      font-size:22px;
+      line-height:1.9;
+      margin-bottom:25px;
+    }
+
+    .hero-image{
+      width:50%;
+      background:
+      linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),
+      url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80");
+
+      background-size:cover;
+      background-position:center;
+      border-top-left-radius:180px;
+      border-bottom-left-radius:180px;
+    }
+
+    section{
+      max-width:1450px;
+      margin:70px auto;
+      padding:0 20px;
+      text-align:center;
+    }
+
+    section h2{
+      font-size:46px;
+      color:#003b7a;
+      margin-bottom:15px;
+    }
+
+    .underline{
+      width:80px;
+      height:4px;
+      background:#e9a722;
+      border-radius:10px;
+      margin:0 auto 45px;
     }
 
     .cards{
-      margin-top:60px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:30px;
+      gap:25px;
     }
 
     .card{
-      background:#f8fbff;
-      border-radius:35px;
-      padding:40px 30px;
-      text-align:center;
+      background:white;
+      border-radius:30px;
+      padding:40px 28px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
       transition:all 0.3s ease;
-      box-shadow:0 10px 25px rgba(0,0,0,0.05);
     }
 
     .card:hover{
@@ -154,27 +200,26 @@
     }
 
     .icon{
-      width:90px;
-      height:90px;
+      width:85px;
+      height:85px;
       border-radius:50%;
       background:#edf4ff;
       display:flex;
       align-items:center;
       justify-content:center;
       margin:0 auto 25px;
-      font-size:40px;
+      font-size:38px;
     }
 
     .card h3{
       color:#003b7a;
-      margin-bottom:15px;
-      font-size:28px;
+      font-size:24px;
+      margin-bottom:18px;
     }
 
     .card p{
       font-size:19px;
       line-height:1.8;
-      margin:0;
     }
 
     footer{
@@ -204,20 +249,26 @@
         justify-content:center;
       }
 
-      .about-section{
-        padding:40px;
+      .hero{
+        flex-direction:column;
       }
 
-      .about-section h1{
-        font-size:44px;
+      .hero-text,
+      .hero-image{
+        width:100%;
       }
 
-      .about-section p{
-        font-size:20px;
+      .hero-image{
+        height:300px;
+        border-radius:0;
       }
 
       .cards{
         grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:40px;
       }
 
     }
@@ -234,23 +285,15 @@
     <img src="logo.png.png" alt="Logo Starostwa">
 
     <div class="logo-text">
-
-      <div class="big-text">
-        Opatów
-      </div>
-
-      <div class="small-text">
-        STAROSTWO<br>
-        POWIATOWE
-      </div>
-
+      <div class="big-text">Starostwo Powiatowe</div>
+      <div class="small-text">w Opatowie</div>
     </div>
 
   </a>
 
   <nav>
     <a href="onas.html">O nas</a>
-    <a href="#">Inkubator Przemysłowy</a>
+    <a href="inkubator.html">Inkubator Przemysłowy</a>
     <a href="#">Manufaktura</a>
   </nav>
 
@@ -260,35 +303,53 @@
 
 </header>
 
-<div class="about-section">
+<div class="hero">
 
-  <h1>O nas</h1>
+  <div class="hero-text">
 
-  <p>
-    Starostwo Powiatowe w Opatowie to jednostka samorządu
-    terytorialnego działająca na rzecz mieszkańców Powiatu
-    Opatowskiego.
-  </p>
+    <div class="label">O NAS</div>
 
-  <p>
-    Naszym celem jest
-    <span class="highlight">
-      sprawna obsługa mieszkańców,
-    </span>
-    rozwój lokalnej społeczności oraz realizacja zadań publicznych
-    w zakresie administracji, edukacji, infrastruktury,
-    ochrony środowiska i bezpieczeństwa.
-  </p>
+    <h1>Starostwo Powiatowe w Opatowie</h1>
 
-  <p>
-    Dbamy o przejrzystość działania urzędu,
-    dostępność usług oraz nowoczesną komunikację z mieszkańcami.
-  </p>
+    <div class="line"></div>
 
-  <p>
-    Wspólnie działamy na rzecz rozwoju Powiatu Opatowskiego,
-    wspierając inicjatywy społeczne, kulturalne i gospodarcze regionu.
-  </p>
+    <p>
+      Starostwo Powiatowe w Opatowie to jednostka
+      samorządu terytorialnego działająca na rzecz
+      mieszkańców Powiatu Opatowskiego.
+    </p>
+
+    <p>
+      Naszym celem jest sprawna obsługa mieszkańców,
+      rozwój lokalnej społeczności oraz realizacja
+      zadań publicznych w zakresie administracji,
+      edukacji, infrastruktury, ochrony środowiska
+      i bezpieczeństwa.
+    </p>
+
+    <p>
+      Dbamy o przejrzystość działania urzędu,
+      dostępność usług oraz nowoczesną komunikację
+      z mieszkańcami.
+    </p>
+
+    <p>
+      Wspólnie działamy na rzecz rozwoju Powiatu
+      Opatowskiego, wspierając inicjatywy społeczne,
+      kulturalne i gospodarcze regionu.
+    </p>
+
+  </div>
+
+  <div class="hero-image"></div>
+
+</div>
+
+<section>
+
+  <h2>Nasza misja</h2>
+
+  <div class="underline"></div>
 
   <div class="cards">
 
@@ -299,19 +360,8 @@
       <h3>Administracja</h3>
 
       <p>
-        Sprawna i nowoczesna obsługa mieszkańców powiatu.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <div class="icon">🌱</div>
-
-      <h3>Rozwój Regionu</h3>
-
-      <p>
-        Wspieramy lokalne inicjatywy oraz rozwój gospodarczy.
+        Sprawna i nowoczesna obsługa mieszkańców
+        oraz rozwój regionu.
       </p>
 
     </div>
@@ -323,28 +373,36 @@
       <h3>Współpraca</h3>
 
       <p>
-        Łączymy mieszkańców, przedsiębiorców i instytucje.
+        Wspieramy lokalne inicjatywy społeczne,
+        edukacyjne i gospodarcze.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Rozwój</h3>
+
+      <p>
+        Działamy na rzecz nowoczesnego
+        i bezpiecznego powiatu opatowskiego.
       </p>
 
     </div>
 
   </div>
 
-</div>
+</section>
 
 <footer>
 
-  <h3>
-    Starostwo Powiatowe w Opatowie
-  </h3>
+  <h3>Starostwo Powiatowe w Opatowie</h3>
 
-  <p>
-    Powiat Opatowski
-  </p>
+  <p>Powiat Opatowski</p>
 
-  <p>
-    © 2025 Wszystkie prawa zastrzeżone
-  </p>
+  <p>© 2025 Wszystkie prawa zastrzeżone</p>
 
 </footer>
 
