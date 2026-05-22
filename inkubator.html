@@ -1,389 +1,443 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inkubator Przemysłowy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inkubator Przemysłowy</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<style>
 
-    body{
-      font-family:Arial,sans-serif;
-      background:#f5f7fb;
-      color:#0b2447;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    header{
-      max-width:1450px;
-      margin:25px auto;
-      background:white;
-      border-radius:40px;
-      padding:20px 45px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fb;
+color:#0b2447;
+}
 
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      text-decoration:none;
-    }
+header{
+max-width:1450px;
+margin:25px auto;
+background:white;
+border-radius:40px;
+padding:20px 45px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .logo img{
-      height:75px;
-      width:auto;
-    }
+.logo{
+display:flex;
+align-items:center;
+gap:18px;
+text-decoration:none;
+}
 
-    .logo-text{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
+.logo img{
+height:75px;
+}
 
-    .big-text{
-      color:#003b7a;
-      font-size:32px;
-      font-weight:bold;
-      line-height:1.1;
-    }
+.big-text{
+color:#003b7a;
+font-size:34px;
+font-weight:bold;
+}
 
-    .small-text{
-      color:#444;
-      font-size:22px;
-      line-height:1.1;
-      margin-top:4px;
-    }
+.small-text{
+color:#444;
+font-size:22px;
+}
 
-    nav{
-      display:flex;
-      align-items:center;
-      gap:28px;
-    }
+nav{
+display:flex;
+gap:35px;
+align-items:center;
+}
 
-    nav a{
-      text-decoration:none;
-      color:#0b2447;
-      font-weight:bold;
-      font-size:18px;
-      transition:all 0.3s ease;
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:15px;
-      white-space:nowrap;
-    }
+nav a{
+text-decoration:none;
+color:#0b2447;
+font-weight:bold;
+font-size:18px;
+transition:0.3s;
+}
 
-    nav a:hover{
-      transform:scale(1.08);
-      color:#e9a722;
-      background:#f5f7fb;
-    }
+nav a:hover{
+color:#e9a722;
+}
 
-    .btn{
-      background:#e9a722;
-      color:white;
-      text-decoration:none;
-      padding:15px 28px;
-      border-radius:35px;
-      font-weight:bold;
-      transition:all 0.3s ease;
-      display:inline-block;
-      white-space:nowrap;
-    }
+.btn{
+background:#e9a722;
+color:white;
+text-decoration:none;
+padding:14px 24px;
+border-radius:35px;
+font-weight:bold;
+transition:0.3s;
+}
 
-    .btn:hover{
-      transform:scale(1.08);
-      box-shadow:0 10px 25px rgba(233,167,34,0.4);
-    }
+.btn:hover{
+transform:scale(1.05);
+}
 
-    .hero{
-      max-width:1450px;
-      margin:20px auto;
-      border-radius:55px;
-      overflow:hidden;
-      display:flex;
-      background:linear-gradient(135deg,#003b7a,#0057a8);
-      color:white;
-      min-height:520px;
-    }
+.container{
+max-width:1450px;
+margin:30px auto;
+background:white;
+border-radius:40px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .hero-text{
-      width:50%;
-      padding:75px;
-    }
+.hero{
+display:flex;
+min-height:320px;
+}
 
-    .label{
-      color:#e9a722;
-      font-weight:bold;
-      font-size:18px;
-      margin-bottom:25px;
-      text-transform:uppercase;
-    }
+.hero-left{
+width:60%;
+background:#001b66;
+padding:60px;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
 
-    .hero-text h1{
-      font-size:58px;
-      line-height:1.15;
-      margin-bottom:30px;
-    }
+.hero-left h1{
+font-size:72px;
+line-height:1.1;
+color:#f0b323;
+font-family:cursive;
+margin-bottom:10px;
+}
 
-    .line{
-      width:80px;
-      height:4px;
-      background:#e9a722;
-      border-radius:10px;
-      margin-bottom:30px;
-    }
+.hero-left h2{
+font-size:58px;
+line-height:1.1;
+font-weight:bold;
+}
 
-    .hero-text p{
-      font-size:23px;
-      line-height:1.8;
-      margin-bottom:35px;
-    }
+.hero-right{
+width:40%;
+background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;
+background-position:center;
+}
 
-    .hero-buttons{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+.section{
+display:grid;
+grid-template-columns:1fr 1fr;
+border-top:2px solid #eee;
+}
 
-    .outline{
-      background:transparent;
-      border:2px solid white;
-    }
+.left{
+padding:35px;
+}
 
-    .hero-image{
-      width:50%;
-      background:
-      linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),
-      url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80");
-      background-size:cover;
-      background-position:center;
-      border-top-left-radius:180px;
-      border-bottom-left-radius:180px;
-    }
+.right{
+background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80');
+background-size:cover;
+background-position:center;
+min-height:260px;
+}
 
-    section{
-      max-width:1450px;
-      margin:70px auto;
-      padding:0 20px;
-      text-align:center;
-    }
+.title{
+display:flex;
+align-items:center;
+gap:15px;
+background:#e9edf7;
+padding:16px 25px;
+border-radius:20px;
+margin-bottom:25px;
+}
 
-    section h2{
-      font-size:46px;
-      color:#003b7a;
-      margin-bottom:15px;
-    }
+.title img{
+width:45px;
+}
 
-    .underline{
-      width:80px;
-      height:4px;
-      background:#e9a722;
-      border-radius:10px;
-      margin:0 auto 45px;
-    }
+.title h3{
+font-size:34px;
+color:#001b66;
+}
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:25px;
-    }
+.left p{
+font-size:21px;
+line-height:1.7;
+margin-bottom:20px;
+}
 
-    .card{
-      background:white;
-      border-radius:30px;
-      padding:40px 28px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.08);
-      transition:all 0.3s ease;
-    }
+.left ul{
+padding-left:25px;
+}
 
-    .card:hover{
-      transform:translateY(-10px);
-    }
+.left li{
+font-size:20px;
+margin-bottom:10px;
+line-height:1.5;
+}
 
-    .icon{
-      width:85px;
-      height:85px;
-      border-radius:50%;
-      background:#edf4ff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      margin:0 auto 25px;
-      font-size:38px;
-    }
+footer{
+background:#001b66;
+padding:45px;
+color:white;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+}
 
-    .card h3{
-      color:#003b7a;
-      font-size:24px;
-      margin-bottom:18px;
-    }
+.footer-box{
+display:flex;
+align-items:center;
+gap:20px;
+}
 
-    .card p{
-      font-size:19px;
-      line-height:1.8;
-    }
+.footer-box img{
+height:90px;
+}
 
-    footer{
-      max-width:1450px;
-      margin:60px auto 25px;
-      background:#003b7a;
-      color:white;
-      border-radius:45px;
-      padding:50px;
-      text-align:center;
-    }
+.footer-box h4{
+font-size:32px;
+}
 
-    footer p{
-      margin-top:12px;
-      color:#dbeafe;
-    }
+.footer-box p{
+margin-top:10px;
+font-size:18px;
+line-height:1.7;
+}
 
-    @media(max-width:1100px){
-      header{
-        flex-direction:column;
-        gap:20px;
-      }
+@media(max-width:1200px){
 
-      nav{
-        flex-wrap:wrap;
-        justify-content:center;
-      }
+header{
+flex-direction:column;
+gap:20px;
+}
 
-      .hero{
-        flex-direction:column;
-      }
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
 
-      .hero-text,
-      .hero-image{
-        width:100%;
-      }
+.hero{
+flex-direction:column;
+}
 
-      .hero-image{
-        height:300px;
-        border-radius:0;
-      }
+.hero-left,
+.hero-right{
+width:100%;
+}
 
-      .hero-text h1{
-        font-size:40px;
-      }
+.hero-right{
+height:300px;
+}
 
-      .cards{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+.section{
+grid-template-columns:1fr;
+}
+
+.right{
+height:300px;
+}
+
+footer{
+grid-template-columns:1fr;
+}
+
+.hero-left h1{
+font-size:50px;
+}
+
+.hero-left h2{
+font-size:42px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 
-  <a href="index.html" class="logo">
-    <img src="logo.png.png" alt="Logo Starostwa">
+<a href="index.html" class="logo">
 
-    <div class="logo-text">
-      <div class="big-text">Starostwo Powiatowe</div>
-      <div class="small-text">w Opatowie</div>
-    </div>
-  </a>
+<img src="logo.png.png">
 
-  <nav>
-    <a href="onas.html">O nas</a>
-    <a href="inkubator.html">Inkubator Przemysłowy</a>
-    <a href="#">Manufaktura</a>
-  </nav>
+<div>
+<div class="big-text">Starostwo Powiatowe</div>
+<div class="small-text">w Opatowie</div>
+</div>
 
-  <a href="kontakt.html" class="btn">Skontaktuj się</a>
+</a>
+
+<nav>
+<a href="onas.html">O nas</a>
+<a href="inkubator.html">Inkubator Przemysłowy</a>
+<a href="#">Manufaktura</a>
+</nav>
+
+<a href="kontakt.html" class="btn">
+Skontaktuj się
+</a>
 
 </header>
 
+<div class="container">
+
 <div class="hero">
 
-  <div class="hero-text">
+<div class="hero-left">
 
-    <div class="label">Inkubator Przemysłowy</div>
-
-    <h1>Inkubator Przemysłowy we Włostowie</h1>
-
-    <div class="line"></div>
-
-    <p>
-      Wspieramy rozwój przedsiębiorczości i innowacyjnych pomysłów.
-      Tworzymy nowoczesne warunki do rozwoju firm i start-upów
-      w powiecie opatowskim.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="kontakt.html" class="btn">Dowiedz się więcej</a>
-      <a href="#oferta" class="btn outline">Oferta dla firm</a>
-    </div>
-
-  </div>
-
-  <div class="hero-image"></div>
+<h1>Nowoczesna przestrzeń</h1>
+<h2>DLA BIZNESU</h2>
 
 </div>
 
-<section id="oferta">
+<div class="hero-right"></div>
 
-  <h2>Co oferujemy?</h2>
-  <div class="underline"></div>
+</div>
 
-  <div class="cards">
+<div class="section">
 
-    <div class="card">
-      <div class="icon">🏢</div>
-      <h3>Nowoczesna infrastruktura</h3>
-      <p>
-        Dostęp do biur, powierzchni produkcyjnych
-        i zaplecza technicznego.
-      </p>
-    </div>
+<div class="left">
 
-    <div class="card">
-      <div class="icon">👥</div>
-      <h3>Wsparcie dla firm</h3>
-      <p>
-        Doradztwo biznesowe, pomoc w pozyskiwaniu funduszy
-        i rozwijaniu działalności.
-      </p>
-    </div>
+<div class="title">
+<h3>🏭 Hale produkcyjno-magazynowe</h3>
+</div>
 
-    <div class="card">
-      <div class="icon">📈</div>
-      <h3>Rozwój i innowacje</h3>
-      <p>
-        Wspieramy innowacyjne pomysły i technologie,
-        które zmieniają przyszłość.
-      </p>
-    </div>
+<p>
+Kompleks obejmuje dwie nowoczesne hale
+o łącznej powierzchni blisko 6000 m².
+</p>
 
-    <div class="card">
-      <div class="icon">🤝</div>
-      <h3>Współpraca</h3>
-      <p>
-        Łączymy przedsiębiorców, instytucje
-        i partnerów biznesowych.
-      </p>
-    </div>
+<ul>
+<li>Hala nr 1 — 4129 m²</li>
+<li>Możliwość wydzielenia pomieszczeń użytkowych</li>
+<li>Każde z własnym przyłączem wodno-kanalizacyjnym</li>
+<li>Hala nr 2 — 1543 m²</li>
+<li>Zaplecze socjalne o powierzchni 67 m²</li>
+</ul>
 
-  </div>
+</div>
 
-</section>
+<div class="right"></div>
+
+</div>
+
+<div class="section">
+
+<div class="left">
+
+<div class="title">
+<h3>🏢 Budynek administracyjny</h3>
+</div>
+
+<p>
+Budynek socjalno-administracyjny
+o powierzchni 383 m² oferuje:
+</p>
+
+<ul>
+<li>Klimatyzowane pomieszczenia biurowe</li>
+<li>Powierzchnie biurowe o wielkości 70 m²</li>
+<li>Salę konferencyjną</li>
+</ul>
+
+</div>
+
+<div class="right"></div>
+
+</div>
+
+<div class="section">
+
+<div class="left">
+
+<div class="title">
+<h3>🚛 Teren zewnętrzny</h3>
+</div>
+
+<ul>
+<li>Ciągi komunikacyjne</li>
+<li>Parking dla samochodów osobowych i ciężarowych</li>
+<li>Parking dla tirów</li>
+<li>Place składowe</li>
+<li>Monitoring i oświetlenie całego obiektu</li>
+</ul>
+
+</div>
+
+<div class="right"></div>
+
+</div>
+
+<div class="section">
+
+<div class="left">
+
+<div class="title">
+<h3>📍 Doskonałe położenie</h3>
+</div>
+
+<p>
+Atutem Inkubatora jest lokalizacja
+w sąsiedztwie drogi krajowej nr 9
+oraz blisko obwodnicy Opatowa.
+</p>
+
+</div>
+
+<div class="right"></div>
+
+</div>
 
 <footer>
-  <h3>Starostwo Powiatowe w Opatowie</h3>
-  <p>Powiat Opatowski</p>
-  <p>© 2025 Wszystkie prawa zastrzeżone</p>
+
+<div class="footer-box">
+
+<img src="logo.png.png">
+
+<div>
+<h4>Starostwo Powiatowe</h4>
+<p>Administrator Inkubatora</p>
+</div>
+
+</div>
+
+<div class="footer-box">
+
+<div>
+<h4>Kontakt</h4>
+<p>
++48 15 868 29 71<br>
+powiat@opatow.pl<br>
+ul. Henryka Sienkiewicza 17
+</p>
+</div>
+
+</div>
+
+<div class="footer-box">
+
+<div>
+<h4>ePUAP</h4>
+<p>
+/fooB52g0AM/skrytkaESP<br>
+E-DORĘCZENIA
+</p>
+</div>
+
+</div>
+
 </footer>
+
+</div>
 
 </body>
 </html>
