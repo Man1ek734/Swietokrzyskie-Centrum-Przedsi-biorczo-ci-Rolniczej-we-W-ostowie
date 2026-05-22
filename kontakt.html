@@ -6,7 +6,12 @@
 <title>Kontakt</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:Arial,sans-serif;
@@ -52,6 +57,7 @@ header{
 nav{
   display:flex;
   gap:35px;
+  align-items:center;
 }
 
 nav a{
@@ -59,6 +65,11 @@ nav a{
   color:#0b2447;
   font-weight:bold;
   font-size:18px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#e9a722;
 }
 
 .btn{
@@ -70,9 +81,16 @@ nav a{
   font-weight:bold;
   display:inline-block;
   white-space:nowrap;
+  transition:0.3s;
 }
 
-.fb{background:#1877f2}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.fb{
+  background:#1877f2;
+}
 
 .hero{
   max-width:1450px;
@@ -132,32 +150,17 @@ nav a{
   gap:28px;
 }
 
-.card h2{
-  height:70px;
+.card{
+  background:white;
+  border-radius:35px;
+  padding:38px 24px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  min-height:370px;
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
-}
-
-.position,
-.bottom-text{
-  height:30px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.gold-line{
-  margin:15px auto 25px;
-}
-
-.card p{
-  height:35px;
-  margin-bottom:20px;
-}
-
-.card .btn{
-  margin-top:auto;
+  justify-content:space-between;
 }
 
 .icon{
@@ -175,14 +178,31 @@ nav a{
 .card h2{
   color:#003b7a;
   font-size:29px;
-  line-height:1.15;
-  margin-bottom:8px;
+  line-height:1.25;
+  margin-bottom:12px;
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 .position{
   color:#555;
   font-size:20px;
-  min-height:30px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.bottom-text{
+  color:#555;
+  font-size:20px;
+  height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .gold-line{
@@ -195,18 +215,17 @@ nav a{
 
 .card p{
   font-size:21px;
-  margin-bottom:18px;
+  margin-top:8px;
+  margin-bottom:22px;
+  min-height:35px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .card .btn{
   font-size:15px;
   padding:13px 20px;
-}
-
-.bottom-text{
-  color:#555;
-  font-size:20px;
-  min-height:30px;
 }
 
 footer{
@@ -229,25 +248,53 @@ footer p{
 }
 
 @media(max-width:1200px){
-  header{flex-direction:column;gap:20px}
-  nav{flex-wrap:wrap;justify-content:center}
-  .hero{flex-direction:column}
-  .hero-left,.hero-right{width:100%}
-  .hero-right{height:300px;border-radius:0}
-  .contacts{grid-template-columns:1fr}
+
+  header{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    flex-direction:column;
+  }
+
+  .hero-left,
+  .hero-right{
+    width:100%;
+  }
+
+  .hero-right{
+    height:300px;
+    border-radius:0;
+  }
+
+  .contacts{
+    grid-template-columns:1fr;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
   <a href="index.html" class="logo">
+
     <img src="logo.png.png" alt="Logo Starostwa">
+
     <div class="logo-text">
       <div class="big-text">Starostwo Powiatowe</div>
       <div class="small-text">w Opatowie</div>
     </div>
+
   </a>
 
   <nav>
@@ -256,81 +303,165 @@ footer p{
     <a href="#">Manufaktura</a>
   </nav>
 
-  <a href="kontakt.html" class="btn">Skontaktuj się</a>
+  <a href="kontakt.html" class="btn">
+    Skontaktuj się
+  </a>
+
 </header>
 
 <div class="hero">
+
   <div class="hero-left">
+
     <span>KONTAKT</span>
+
     <h1>Skontaktuj się z nami</h1>
+
     <div class="line"></div>
+
     <p>
       Jesteśmy do dyspozycji mieszkańców oraz przedsiębiorców
       Powiatu Opatowskiego. Skontaktuj się z nami telefonicznie
       lub poprzez media społecznościowe.
     </p>
+
   </div>
 
   <div class="hero-right"></div>
+
 </div>
 
 <div class="contacts">
 
   <div class="card">
+
     <div>
+
       <div class="icon">📞</div>
-      <h2>Starostwo Powiatowe<br>w Opatowie</h2>
-      <div class="position"></div>
+
+      <h2>
+        Starostwo Powiatowe<br>
+        w Opatowie
+      </h2>
+
+      <div class="bottom-text">
+        Inkubator Przemysłowy
+      </div>
+
       <div class="gold-line"></div>
-      <p><strong>Nr Tel:</strong> 15 868 29 71</p>
+
+      <p>
+        <strong>Nr Tel:</strong>
+        15 868 29 71
+      </p>
+
     </div>
-    <a href="https://www.facebook.com/PowiatOpatowski" target="_blank" class="btn">
+
+    <a
+      href="https://www.facebook.com/PowiatOpatowski"
+      target="_blank"
+      class="btn"
+    >
       Facebook Starostwa
     </a>
+
   </div>
 
   <div class="card">
+
     <div>
+
       <div class="icon">👤</div>
+
       <h2>Tomasz Staniek</h2>
-      <div class="position">starosta opatowski</div>
+
+      <div class="position">
+        starosta opatowski
+      </div>
+
       <div class="gold-line"></div>
-      <p><strong>Nr Tel:</strong> 15 83 13 540</p>
+
+      <p>
+        <strong>Nr Tel:</strong>
+        15 83 13 540
+      </p>
+
     </div>
-    <a href="https://www.facebook.com/tomasz.staniek.1" target="_blank" class="btn fb">
+
+    <a
+      href="https://www.facebook.com/tomasz.staniek.1"
+      target="_blank"
+      class="btn fb"
+    >
       Facebook Tomasz Staniek
     </a>
+
   </div>
 
   <div class="card">
+
     <div>
+
       <div class="icon">👤</div>
+
       <h2>Małgorzata Jalowska</h2>
-      <div class="position">wicestarosta</div>
+
+      <div class="position">
+        wicestarosta
+      </div>
+
       <div class="gold-line"></div>
-      <p><strong>Nr Tel:</strong> 15 83 13 540</p>
+
+      <p>
+        <strong>Nr Tel:</strong>
+        15 83 13 540
+      </p>
+
     </div>
-    <a href="https://www.facebook.com/jalowskamalgorzata" target="_blank" class="btn fb">
+
+    <a
+      href="https://www.facebook.com/jalowskamalgorzata"
+      target="_blank"
+      class="btn fb"
+    >
       Facebook Małgorzata Jalowska
     </a>
+
   </div>
 
   <div class="card">
+
     <div>
+
       <div class="icon">📞</div>
+
       <h2>Danuta Heba</h2>
-      <div class="bottom-text">Inkubator Przemysłowy</div>
+
+      <div class="bottom-text">
+        Inkubator Przemysłowy
+      </div>
+
       <div class="gold-line"></div>
-      <p><strong>Nr Tel:</strong> 797 994 760</p>
+
+      <p>
+        <strong>Nr Tel:</strong>
+        797 994 760
+      </p>
+
     </div>
+
   </div>
 
 </div>
 
 <footer>
+
   <h3>Starostwo Powiatowe w Opatowie</h3>
+
   <p>Powiat Opatowski</p>
+
   <p>© 2025 Wszystkie prawa zastrzeżone</p>
+
 </footer>
 
 </body>
