@@ -6,7 +6,11 @@
 <title>Inkubator Przemysłowy</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:Arial,sans-serif;
@@ -33,7 +37,10 @@ header{
   text-decoration:none;
 }
 
-.logo img{height:75px}
+.logo img{
+  height:75px;
+  width:auto;
+}
 
 .big-text{
   color:#003b7a;
@@ -79,14 +86,14 @@ nav a{
 }
 
 .hero{
-  display:flex;
-  min-height:430px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
   background:#001b66;
   color:white;
+  min-height:430px;
 }
 
 .hero-text{
-  width:50%;
   padding:65px;
   display:flex;
   flex-direction:column;
@@ -101,7 +108,7 @@ nav a{
 }
 
 .hero-text h1{
-  font-size:60px;
+  font-size:58px;
   line-height:1.1;
   margin-bottom:25px;
 }
@@ -112,7 +119,6 @@ nav a{
 }
 
 .hero-image{
-  width:50%;
   background:url("inkubator4.png");
   background-size:cover;
   background-position:center;
@@ -123,8 +129,8 @@ nav a{
 .row{
   display:grid;
   grid-template-columns:1fr 1fr;
+  min-height:380px;
   border-top:2px solid #e5e7eb;
-  min-height:360px;
 }
 
 .text{
@@ -132,9 +138,6 @@ nav a{
 }
 
 .title{
-  display:flex;
-  align-items:center;
-  gap:15px;
   background:#edf1f7;
   padding:16px 22px;
   border-radius:18px;
@@ -169,15 +172,53 @@ nav a{
 }
 
 .photo{
-  min-height:360px;
+  min-height:380px;
   background-size:cover;
   background-position:center;
 }
 
-.photo1{background-image:url("inkubator5 (2).png")}
-.photo2{background-image:url("inkubator2.png")}
-.photo3{background-image:url("inkubator3.png")}
-.photo4{background-image:url("inkubator6.png.png")}
+.photo1{
+  background-image:url("inkubator5.png");
+}
+
+.photo2{
+  background-image:url("inkubator2.png");
+}
+
+.photo3{
+  background-image:url("inkubator3.png");
+}
+
+.location{
+  border-top:2px solid #e5e7eb;
+  padding:45px;
+}
+
+.location p{
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.address-box{
+  background:#f5f7fb;
+  border-left:5px solid #e9a722;
+  padding:22px;
+  border-radius:14px;
+  margin-bottom:25px;
+  font-size:19px;
+  line-height:1.7;
+}
+
+.map-btn{
+  background:#e9a722;
+  color:white;
+  text-decoration:none;
+  padding:14px 26px;
+  border-radius:30px;
+  font-weight:bold;
+  display:inline-block;
+}
 
 .footer{
   background:#001b66;
@@ -210,15 +251,37 @@ nav a{
 }
 
 @media(max-width:1100px){
-  header{flex-direction:column;gap:20px}
-  nav{flex-wrap:wrap;justify-content:center}
-  .hero{flex-direction:column}
-  .hero-text,.hero-image{width:100%}
-  .hero-image{height:330px;border-radius:0}
-  .row{grid-template-columns:1fr}
-  .photo{height:300px}
-  .footer{grid-template-columns:1fr}
-  .hero-text h1{font-size:42px}
+  header{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero,
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image,
+  .photo{
+    height:330px;
+  }
+
+  .hero-image{
+    border-radius:0;
+  }
+
+  .footer{
+    grid-template-columns:1fr;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
 }
 </style>
 </head>
@@ -228,6 +291,7 @@ nav a{
 <header>
   <a href="index.html" class="logo">
     <img src="logo.png.png" alt="Logo Starostwa">
+
     <div>
       <div class="big-text">Starostwo Powiatowe</div>
       <div class="small-text">w Opatowie</div>
@@ -259,42 +323,43 @@ nav a{
     <div class="hero-image"></div>
   </div>
 
-  <div class="text" style="width:100%;">
+  <div class="row">
     <div class="text">
       <div class="title">
         <h2>🏭 Hale produkcyjno-magazynowe</h2>
-<div class="row">
+      </div>
 
-    <div class="text">
+      <p>
+        Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni
+        blisko 6000 m².
+      </p>
 
-        <div class="title">
-            <h2>🏭 Hale produkcyjno-magazynowe</h2>
-        </div>
+      <h3>Hala nr 1</h3>
+      <ul>
+        <li>powierzchnia: 4129 m²</li>
+        <li>możliwość wydzielenia 6 pomieszczeń użytkowych</li>
+        <li>każde z własnym przyłączem wodno-kanalizacyjnym</li>
+      </ul>
 
-        <p>
-            Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni blisko 6000 m².
-        </p>
-
-        <h3>Hala nr 1</h3>
-        <ul>
-            <li>powierzchnia: 4129 m²</li>
-            <li>możliwość wydzielenia 6 pomieszczeń użytkowych</li>
-            <li>każde z własnym przyłączem wodno-kanalizacyjnym</li>
-        </ul>
-
-        <h3>Hala nr 2</h3>
-        <ul>
-            <li>powierzchnia: 1543 m²</li>
-            <li>zaplecze socjalne o powierzchni 67 m²</li>
-        </ul>
-
+      <h3>Hala nr 2</h3>
+      <ul>
+        <li>powierzchnia: 1543 m²</li>
+        <li>zaplecze socjalne o powierzchni 67 m²</li>
+      </ul>
     </div>
 
     <div class="photo photo1"></div>
+  </div>
 
-</div>
+  <div class="row">
+    <div class="text">
+      <div class="title">
+        <h2>🏢 Budynek administracyjny</h2>
+      </div>
 
-      <p>Budynek socjalno-administracyjny o powierzchni 383 m² oferuje:</p>
+      <p>
+        Budynek socjalno-administracyjny o powierzchni 383 m² oferuje:
+      </p>
 
       <ul>
         <li>klimatyzowane pomieszczenia biurowe</li>
@@ -327,48 +392,30 @@ nav a{
     <div class="photo photo3"></div>
   </div>
 
-<div class="text">
-
+  <div class="location">
     <div class="title">
-        <h2>📍 Doskonałe położenie</h2>
+      <h2>📍 Doskonałe położenie</h2>
     </div>
 
-    <p style="font-size:18px; line-height:1.8; margin-bottom:25px;">
-        Atutem Inkubatora jest lokalizacja w sąsiedztwie drogi krajowej nr 9
-        oraz blisko obwodnicy Opatowa połączonej z nową drogą ekspresową S74.
+    <p>
+      Atutem Inkubatora jest lokalizacja w sąsiedztwie drogi krajowej nr 9
+      oraz blisko obwodnicy Opatowa połączonej z nową drogą ekspresową S74.
     </p>
 
-    <div style="
-        background:#f5f7fb;
-        border-left:5px solid #e9a722;
-        padding:20px;
-        border-radius:12px;
-        margin-bottom:25px;
-    ">
-        <strong style="font-size:18px;">📌 Adres</strong><br><br>
-
-        Włostów 328<br>
-        27-545 Lipnik<br>
-        Powiat Opatowski
+    <div class="address-box">
+      <strong>Adres:</strong><br>
+      Włostów 328<br>
+      27-545 Lipnik<br>
+      Powiat Opatowski
     </div>
 
-    <a href="https://maps.google.com/?q=Włostów+328+27-545+Lipnik"
-       target="_blank"
-       style="
-       display:inline-block;
-       background:#e9a722;
-       color:white;
-       text-decoration:none;
-       padding:14px 28px;
-       border-radius:30px;
-       font-weight:bold;
-       font-size:16px;
-       transition:0.3s;">
-       🗺️ Zobacz lokalizację na mapie
+    <a
+      href="https://maps.google.com/?q=Włostów+328+27-545+Lipnik"
+      target="_blank"
+      class="map-btn"
+    >
+      📍 Zobacz lokalizację na mapie
     </a>
-
-</div>
-
   </div>
 
   <div class="footer">
