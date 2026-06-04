@@ -6,11 +6,7 @@
 <title>Inkubator Przemysłowy</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:Arial,sans-serif;
@@ -37,9 +33,7 @@ header{
   text-decoration:none;
 }
 
-.logo img{
-  height:75px;
-}
+.logo img{height:75px}
 
 .big-text{
   color:#003b7a;
@@ -72,11 +66,10 @@ nav a{
   padding:14px 24px;
   border-radius:35px;
   font-weight:bold;
-  display:inline-block;
   white-space:nowrap;
 }
 
-.container{
+.page{
   max-width:1450px;
   margin:30px auto;
   background:white;
@@ -110,7 +103,7 @@ nav a{
 .hero-text h1{
   font-size:60px;
   line-height:1.1;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .hero-text p{
@@ -127,17 +120,18 @@ nav a{
   border-bottom-left-radius:180px;
 }
 
-.info-row{
+.row{
   display:grid;
   grid-template-columns:1fr 1fr;
   border-top:2px solid #e5e7eb;
+  min-height:360px;
 }
 
-.info-text{
+.text{
   padding:45px;
 }
 
-.info-title{
+.title{
   display:flex;
   align-items:center;
   gap:15px;
@@ -147,61 +141,45 @@ nav a{
   margin-bottom:25px;
 }
 
-.info-title .emoji{
-  font-size:34px;
-}
-
-.info-title h2{
+.title h2{
   color:#003b7a;
   font-size:30px;
 }
 
-.info-text p{
+.text p{
   font-size:20px;
   line-height:1.7;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
-.info-text h3{
+.text h3{
   color:#003b7a;
   font-size:23px;
-  margin:20px 0 10px;
+  margin:18px 0 8px;
 }
 
-.info-text ul{
+.text ul{
   padding-left:25px;
 }
 
-.info-text li{
+.text li{
   font-size:19px;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.info-photo{
-  min-height:330px;
+.photo{
+  min-height:360px;
   background-size:cover;
   background-position:center;
 }
 
-.photo1{
-  background-image:url("inkubator5.png");
-}
+.photo1{background-image:url("inkubator5.png")}
+.photo2{background-image:url("inkubator2.png")}
+.photo3{background-image:url("inkubator3.png")}
+.photo4{background-image:url("inkubator6.png")}
 
-.photo2{
-  background-image:url("inkubator2.png");
-}
-
-.photo3{
-  background-image:url("inkubator3.png");
-}
-
-.photo4{
-  background-image:url("inkubator6.png");
-}
-}
-
-.footer-box{
+.footer{
   background:#001b66;
   color:white;
   padding:45px;
@@ -210,67 +188,37 @@ nav a{
   gap:35px;
 }
 
-.footer-item{
+.footer-box{
   display:flex;
   align-items:center;
   gap:18px;
 }
 
-.footer-item img{
+.footer-box img{
   height:85px;
 }
 
-.footer-item h3{
-  font-size:27px;
+.footer h3{
+  font-size:26px;
   margin-bottom:8px;
 }
 
-.footer-item p{
+.footer p{
   font-size:18px;
   line-height:1.7;
   color:#e5e7eb;
 }
 
 @media(max-width:1100px){
-  header{
-    flex-direction:column;
-    gap:20px;
-  }
-
-  nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero{
-    flex-direction:column;
-  }
-
-  .hero-text,
-  .hero-image{
-    width:100%;
-  }
-
-  .hero-image{
-    height:330px;
-    border-radius:0;
-  }
-
-  .info-row{
-    grid-template-columns:1fr;
-  }
-
-  .info-photo{
-    height:300px;
-  }
-
-  .footer-box{
-    grid-template-columns:1fr;
-  }
-
-  .hero-text h1{
-    font-size:42px;
-  }
+  header{flex-direction:column;gap:20px}
+  nav{flex-wrap:wrap;justify-content:center}
+  .hero{flex-direction:column}
+  .hero-text,.hero-image{width:100%}
+  .hero-image{height:330px;border-radius:0}
+  .row{grid-template-columns:1fr}
+  .photo{height:300px}
+  .footer{grid-template-columns:1fr}
+  .hero-text h1{font-size:42px}
 }
 </style>
 </head>
@@ -280,7 +228,6 @@ nav a{
 <header>
   <a href="index.html" class="logo">
     <img src="logo.png.png" alt="Logo Starostwa">
-
     <div>
       <div class="big-text">Starostwo Powiatowe</div>
       <div class="small-text">w Opatowie</div>
@@ -296,14 +243,12 @@ nav a{
   <a href="kontakt.html" class="btn">Skontaktuj się</a>
 </header>
 
-<div class="container">
+<div class="page">
 
   <div class="hero">
     <div class="hero-text">
       <span>INKUBATOR PRZEMYSŁOWY</span>
-
       <h1>Nowoczesna przestrzeń dla biznesu</h1>
-
       <p>
         Inkubator Przemysłowy we Włostowie to nowoczesne miejsce
         stworzone z myślą o przedsiębiorcach, produkcji, magazynowaniu
@@ -314,17 +259,13 @@ nav a{
     <div class="hero-image"></div>
   </div>
 
-  <div class="info-row">
-    <div class="info-text">
-      <div class="info-title">
-        <div class="emoji">🏭</div>
-        <h2>Hale produkcyjno-magazynowe</h2>
+  <div class="row">
+    <div class="text">
+      <div class="title">
+        <h2>🏭 Hale produkcyjno-magazynowe</h2>
       </div>
 
-      <p>
-        Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni
-        blisko 6000 m².
-      </p>
+      <p>Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni blisko 6000 m².</p>
 
       <h3>Hala nr 1</h3>
       <ul>
@@ -340,19 +281,16 @@ nav a{
       </ul>
     </div>
 
-    <div class="info-photo photo1"></div>
+    <div class="photo photo1"></div>
   </div>
 
-  <div class="info-row">
-    <div class="info-text">
-      <div class="info-title">
-        <div class="emoji">🏢</div>
-        <h2>Budynek administracyjny</h2>
+  <div class="row">
+    <div class="text">
+      <div class="title">
+        <h2>🏢 Budynek administracyjny</h2>
       </div>
 
-      <p>
-        Budynek socjalno-administracyjny o powierzchni 383 m² oferuje:
-      </p>
+      <p>Budynek socjalno-administracyjny o powierzchni 383 m² oferuje:</p>
 
       <ul>
         <li>klimatyzowane pomieszczenia biurowe</li>
@@ -361,19 +299,16 @@ nav a{
       </ul>
     </div>
 
-    <div class="info-photo photo2"></div>
+    <div class="photo photo2"></div>
   </div>
 
-  <div class="info-row">
-    <div class="info-text">
-      <div class="info-title">
-        <div class="emoji">🚛</div>
-        <h2>Teren zewnętrzny</h2>
+  <div class="row">
+    <div class="text">
+      <div class="title">
+        <h2>🚛 Teren zewnętrzny</h2>
       </div>
 
-      <p>
-        Wokół obiektów znajdują się:
-      </p>
+      <p>Wokół obiektów znajdują się:</p>
 
       <ul>
         <li>ciągi komunikacyjne</li>
@@ -385,14 +320,13 @@ nav a{
       </ul>
     </div>
 
-    <div class="info-photo photo3"></div>
+    <div class="photo photo3"></div>
   </div>
 
-  <div class="info-row">
-    <div class="info-text">
-      <div class="info-title">
-        <div class="emoji">📍</div>
-        <h2>Doskonałe położenie</h2>
+  <div class="row">
+    <div class="text">
+      <div class="title">
+        <h2>📍 Doskonałe położenie</h2>
       </div>
 
       <p>
@@ -401,39 +335,35 @@ nav a{
       </p>
     </div>
 
-    <div class="info-photo photo4"></div>
+    <div class="photo photo4"></div>
   </div>
 
-  <div class="footer-box">
-    <div class="footer-item">
-      <img src="logo.png.png" alt="Logo Starostwa">
+  <div class="footer">
+    <div class="footer-box">
+      <img src="logo.png.png" alt="Logo">
       <div>
         <h3>Starostwo Powiatowe w Opatowie</h3>
-        <p>Administratorem Inkubatora jest Starostwo Powiatowe w Opatowie</p>
+        <p>Administratorem Inkubatora jest Starostwo Powiatowe w Opatowie.</p>
       </div>
     </div>
 
-    <div class="footer-item">
-      <div>
-        <h3>Kontakt</h3>
-        <p>
-          +48 15 868 29 71<br>
-          powiat@opatow.pl<br>
-          ul. Henryka Sienkiewicza 17,<br>
-          27-500 Opatów
-        </p>
-      </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p>
+        +48 15 868 29 71<br>
+        powiat@opatow.pl<br>
+        ul. Henryka Sienkiewicza 17,<br>
+        27-500 Opatów
+      </p>
     </div>
 
-    <div class="footer-item">
-      <div>
-        <h3>ePUAP</h3>
-        <p>
-          /fooB52g0AM/skrytkaESP<br>
-          Adres skrzynki E-DORĘCZEŃ:<br>
-          AE:PL-34526-65838-GRGJD-42
-        </p>
-      </div>
+    <div>
+      <h3>ePUAP</h3>
+      <p>
+        /fooB52g0AM/skrytkaESP<br>
+        Adres skrzynki E-DORĘCZEŃ:<br>
+        AE:PL-34526-65838-GRGJD-42
+      </p>
     </div>
   </div>
 
