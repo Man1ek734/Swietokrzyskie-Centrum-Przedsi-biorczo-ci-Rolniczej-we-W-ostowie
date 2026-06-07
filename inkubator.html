@@ -6,11 +6,7 @@
 <title>Inkubator Przemysłowy</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:Arial,sans-serif;
@@ -35,17 +31,12 @@ header{
   align-items:center;
   gap:18px;
   text-decoration:none;
-  transition:0.3s;
+  transition:.3s;
 }
 
-.logo:hover{
-  transform:scale(1.03);
-}
+.logo:hover{transform:scale(1.03)}
 
-.logo img{
-  height:75px;
-  width:auto;
-}
+.logo img{height:75px}
 
 .big-text{
   color:#003b7a;
@@ -69,9 +60,9 @@ nav a{
   color:#0b2447;
   font-weight:bold;
   font-size:18px;
-  transition:0.3s;
   padding:10px 12px;
   border-radius:14px;
+  transition:.3s;
 }
 
 nav a:hover{
@@ -80,21 +71,20 @@ nav a:hover{
   transform:scale(1.08);
 }
 
-.btn{
+.btn,.map-btn{
   background:#e9a722;
   color:white;
   text-decoration:none;
   padding:14px 24px;
   border-radius:35px;
   font-weight:bold;
-  white-space:nowrap;
   display:inline-block;
-  transition:0.3s;
+  transition:.3s;
 }
 
-.btn:hover{
+.btn:hover,.map-btn:hover{
   transform:scale(1.07);
-  box-shadow:0 10px 25px rgba(233,167,34,0.35);
+  box-shadow:0 10px 25px rgba(233,167,34,.35);
 }
 
 .page{
@@ -103,7 +93,7 @@ nav a:hover{
   background:white;
   border-radius:45px;
   overflow:hidden;
-  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
 }
 
 .hero{
@@ -145,21 +135,10 @@ nav a:hover{
   background-position:center;
   border-top-left-radius:180px;
   border-bottom-left-radius:180px;
-  transition:0.4s;
 }
 
-.hero-image:hover{
-  transform:scale(1.03);
-}
-
-.row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:380px;
+.section{
   border-top:2px solid #e5e7eb;
-}
-
-.text{
   padding:45px;
 }
 
@@ -168,7 +147,7 @@ nav a:hover{
   padding:16px 22px;
   border-radius:18px;
   margin-bottom:25px;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .title:hover{
@@ -181,52 +160,10 @@ nav a:hover{
   font-size:30px;
 }
 
-.text p{
+.section p{
   font-size:20px;
   line-height:1.7;
-  margin-bottom:18px;
-}
-
-.text h3{
-  color:#003b7a;
-  font-size:23px;
-  margin:18px 0 8px;
-}
-
-.text ul{
-  padding-left:25px;
-}
-
-.text li{
-  font-size:19px;
-  line-height:1.6;
-  margin-bottom:6px;
-}
-
-.photo{
-  min-height:380px;
-  background-size:cover;
-  background-position:center;
-  transition:0.4s;
-}
-
-.photo:hover{
-  transform:scale(1.025);
-}
-
-.photo1{
-  background-image:url("inkubator5.png");
-}
-
-.full-section{
-  border-top:2px solid #e5e7eb;
-  padding:45px;
-}
-
-.full-section p{
-  font-size:20px;
-  line-height:1.7;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .info-grid{
@@ -234,6 +171,7 @@ nav a:hover{
   grid-template-columns:repeat(2,1fr);
   gap:25px;
   margin-top:25px;
+  width:100%;
 }
 
 .info-box{
@@ -241,12 +179,12 @@ nav a:hover{
   border-radius:22px;
   padding:28px;
   border-left:5px solid #e9a722;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .info-box:hover{
   transform:translateY(-8px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.08);
+  box-shadow:0 12px 25px rgba(0,0,0,.08);
 }
 
 .info-box h3{
@@ -265,17 +203,6 @@ nav a:hover{
   margin-bottom:8px;
 }
 
-.location{
-  border-top:2px solid #e5e7eb;
-  padding:45px;
-}
-
-.location p{
-  font-size:20px;
-  line-height:1.7;
-  margin-bottom:25px;
-}
-
 .address-box{
   background:#f5f7fb;
   border-left:5px solid #e9a722;
@@ -284,28 +211,12 @@ nav a:hover{
   margin-bottom:25px;
   font-size:19px;
   line-height:1.7;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .address-box:hover{
   transform:translateY(-6px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.map-btn{
-  background:#e9a722;
-  color:white;
-  text-decoration:none;
-  padding:14px 26px;
-  border-radius:30px;
-  font-weight:bold;
-  display:inline-block;
-  transition:0.3s;
-}
-
-.map-btn:hover{
-  transform:scale(1.07);
-  box-shadow:0 10px 25px rgba(233,167,34,0.35);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .footer{
@@ -323,9 +234,7 @@ nav a:hover{
   gap:18px;
 }
 
-.footer-box img{
-  height:85px;
-}
+.footer-box img{height:85px}
 
 .footer h3{
   font-size:26px;
@@ -339,41 +248,13 @@ nav a:hover{
 }
 
 @media(max-width:1100px){
-  header{
-    flex-direction:column;
-    gap:20px;
-  }
-
-  nav{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero,
-  .row{
-    grid-template-columns:1fr;
-  }
-
-  .hero-image,
-  .photo{
-    height:330px;
-  }
-
-  .hero-image{
-    border-radius:0;
-  }
-
-  .info-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer{
-    grid-template-columns:1fr;
-  }
-
-  .hero-text h1{
-    font-size:42px;
-  }
+  header{flex-direction:column;gap:20px}
+  nav{flex-wrap:wrap;justify-content:center}
+  .hero{grid-template-columns:1fr}
+  .hero-image{height:330px;border-radius:0}
+  .info-grid{grid-template-columns:1fr}
+  .footer{grid-template-columns:1fr}
+  .hero-text h1{font-size:42px}
 }
 </style>
 </head>
@@ -383,7 +264,6 @@ nav a:hover{
 <header>
   <a href="index.html" class="logo">
     <img src="logo.png.png" alt="Logo Starostwa">
-
     <div>
       <div class="big-text">Starostwo Powiatowe</div>
       <div class="small-text">w Opatowie</div>
@@ -415,110 +295,100 @@ nav a:hover{
     <div class="hero-image"></div>
   </div>
 
-  <div class="row">
-    <div class="text">
-      <div class="title">
-      <div class="full-section">
-
+  <div class="section">
     <div class="title">
-        <h2>🏭 Hale produkcyjno-magazynowe</h2>
+      <h2>🏭 Hale produkcyjno-magazynowe</h2>
     </div>
 
     <p>
-        Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni blisko 6000 m².
+      Kompleks obejmuje dwie nowoczesne hale o łącznej powierzchni blisko 6000 m².
     </p>
 
     <div class="info-grid">
+      <div class="info-box">
+        <h3>Hala nr 1</h3>
+        <ul>
+          <li>Powierzchnia: 4129 m²</li>
+          <li>Możliwość wydzielenia 6 pomieszczeń użytkowych</li>
+          <li>Każde z własnym przyłączem wodno-kanalizacyjnym</li>
+        </ul>
+      </div>
 
-        <div class="info-box">
-            <h3>Hala nr 1</h3>
-
-            <ul>
-                <li>Powierzchnia: 4129 m²</li>
-                <li>Możliwość wydzielenia 6 pomieszczeń użytkowych</li>
-                <li>Każde z własnym przyłączem wodno-kanalizacyjnym</li>
-            </ul>
-        </div>
-
-        <div class="info-box">
-            <h3>Hala nr 2</h3>
-
-            <ul>
-                <li>Powierzchnia: 1543 m²</li>
-                <li>Zaplecze socjalne o powierzchni 67 m²</li>
-            </ul>
-        </div>
-
+      <div class="info-box">
+        <h3>Hala nr 2</h3>
+        <ul>
+          <li>Powierzchnia: 1543 m²</li>
+          <li>Zaplecze socjalne o powierzchni 67 m²</li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-</div>
-  <div class="full-section">
+  <div class="section">
     <div class="title">
       <h2>🏢 Budynek administracyjny</h2>
     </div>
 
     <p>
-      Budynek socjalno-administracyjny o powierzchni 383 m² został
-      przygotowany z myślą o wygodnej obsłudze przedsiębiorców
-      korzystających z Inkubatora Przemysłowego.
+      Budynek socjalno-administracyjny o powierzchni 383 m² został przygotowany
+      z myślą o wygodnej obsłudze przedsiębiorców korzystających z Inkubatora Przemysłowego.
     </p>
 
     <div class="info-grid">
       <div class="info-box">
         <h3>Pomieszczenia biurowe</h3>
         <ul>
-          <li>klimatyzowane pomieszczenia biurowe</li>
-          <li>powierzchnie biurowe o łącznej wielkości 70 m²</li>
-          <li>nowoczesna infrastruktura techniczna</li>
+          <li>Klimatyzowane pomieszczenia biurowe</li>
+          <li>Powierzchnie biurowe o łącznej wielkości 70 m²</li>
+          <li>Nowoczesna infrastruktura techniczna</li>
         </ul>
       </div>
 
       <div class="info-box">
         <h3>Zaplecze dla firm</h3>
         <ul>
-          <li>sala konferencyjna o powierzchni 50 m²</li>
-          <li>zaplecze socjalne dla najemców</li>
-          <li>warunki do prowadzenia spotkań i obsługi firm</li>
+          <li>Sala konferencyjna o powierzchni 50 m²</li>
+          <li>Zaplecze socjalne dla najemców</li>
+          <li>Warunki do prowadzenia spotkań i obsługi firm</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="full-section">
+  <div class="section">
     <div class="title">
       <h2>🚛 Teren zewnętrzny</h2>
     </div>
 
     <p>
-      Teren wokół Inkubatora został przygotowany z myślą o sprawnej
-      obsłudze logistycznej, komforcie użytkowników oraz wygodnym
-      dostępie do infrastruktury przemysłowej.
+      Teren wokół Inkubatora został przygotowany z myślą o sprawnej obsłudze
+      logistycznej, komforcie użytkowników oraz wygodnym dostępie do infrastruktury przemysłowej.
     </p>
 
     <div class="info-grid">
       <div class="info-box">
         <h3>Komunikacja i parkingi</h3>
         <ul>
-          <li>ciągi komunikacyjne</li>
-          <li>miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
-          <li>parking dla tirów</li>
-          <li>dogodny dojazd do drogi krajowej nr 9</li>
+          <li>Ciągi komunikacyjne</li>
+          <li>Miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
+          <li>Parking dla tirów</li>
+          <li>Dogodny dojazd do drogi krajowej nr 9</li>
         </ul>
       </div>
 
       <div class="info-box">
         <h3>Place i bezpieczeństwo</h3>
         <ul>
-          <li>place składowe o powierzchni blisko 5800 m²</li>
-          <li>teren utwardzony geokratą</li>
-          <li>monitoring całego obiektu</li>
-          <li>oświetlenie terenu zewnętrznego</li>
+          <li>Place składowe o powierzchni blisko 5800 m²</li>
+          <li>Teren utwardzony geokratą</li>
+          <li>Monitoring całego obiektu</li>
+          <li>Oświetlenie terenu zewnętrznego</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="location">
+  <div class="section">
     <div class="title">
       <h2>📍 Doskonałe położenie</h2>
     </div>
@@ -535,11 +405,7 @@ nav a:hover{
       Powiat Opatowski
     </div>
 
-    <a
-      href="https://maps.google.com/?q=Włostów+328+27-545+Lipnik"
-      target="_blank"
-      class="map-btn"
-    >
+    <a href="https://maps.google.com/?q=Włostów+328+27-545+Lipnik" target="_blank" class="map-btn">
       📍 Zobacz lokalizację na mapie
     </a>
   </div>
