@@ -6,11 +6,7 @@
 <title>Inkubator Przemysłowy</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
   font-family:Arial,sans-serif;
@@ -133,6 +129,11 @@ nav a{
   border-top:2px solid #e5e7eb;
 }
 
+.row-full{
+  display:block;
+  border-top:2px solid #e5e7eb;
+}
+
 .text{
   padding:45px;
 }
@@ -181,12 +182,23 @@ nav a{
   background-image:url("inkubator5.png");
 }
 
-.photo2{
-  background-image:url("inkubator2.png");
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:25px;
+  margin-top:25px;
 }
 
-.photo3{
-  background-image:url("inkubator3.png");
+.info-box{
+  background:#f5f7fb;
+  border-radius:22px;
+  padding:28px;
+  border-left:5px solid #e9a722;
+}
+
+.info-box h3{
+  margin-top:0;
+  margin-bottom:15px;
 }
 
 .location{
@@ -275,6 +287,10 @@ nav a{
     border-radius:0;
   }
 
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
   .footer{
     grid-template-columns:1fr;
   }
@@ -351,45 +367,74 @@ nav a{
     <div class="photo photo1"></div>
   </div>
 
-  <div class="row">
+  <div class="row-full">
     <div class="text">
       <div class="title">
         <h2>🏢 Budynek administracyjny</h2>
       </div>
 
       <p>
-        Budynek socjalno-administracyjny o powierzchni 383 m² oferuje:
+        Budynek socjalno-administracyjny o powierzchni 383 m² został
+        przygotowany z myślą o wygodnej obsłudze przedsiębiorców
+        korzystających z Inkubatora Przemysłowego.
       </p>
 
-      <ul>
-        <li>klimatyzowane pomieszczenia biurowe</li>
-        <li>powierzchnie biurowe o łącznej wielkości 70 m²</li>
-        <li>salę konferencyjną o powierzchni 50 m²</li>
-      </ul>
-    </div>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Pomieszczenia biurowe</h3>
+          <ul>
+            <li>klimatyzowane pomieszczenia biurowe</li>
+            <li>powierzchnie biurowe o łącznej wielkości 70 m²</li>
+            <li>nowoczesna infrastruktura techniczna</li>
+          </ul>
+        </div>
 
-    <div class="photo photo2"></div>
+        <div class="info-box">
+          <h3>Zaplecze dla firm</h3>
+          <ul>
+            <li>sala konferencyjna o powierzchni 50 m²</li>
+            <li>zaplecze socjalne dla najemców</li>
+            <li>warunki do prowadzenia spotkań i obsługi firm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="row">
+  <div class="row-full">
     <div class="text">
       <div class="title">
         <h2>🚛 Teren zewnętrzny</h2>
       </div>
 
-      <p>Wokół obiektów znajdują się:</p>
+      <p>
+        Teren wokół Inkubatora został przygotowany z myślą o sprawnej
+        obsłudze logistycznej, komforcie użytkowników oraz wygodnym
+        dostępie do infrastruktury przemysłowej.
+      </p>
 
-      <ul>
-        <li>ciągi komunikacyjne</li>
-        <li>miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
-        <li>parking dla tirów</li>
-        <li>place składowe o powierzchni blisko 5800 m²</li>
-        <li>teren utwardzony geokratą</li>
-        <li>monitoring i oświetlenie całego obiektu</li>
-      </ul>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Komunikacja i parkingi</h3>
+          <ul>
+            <li>ciągi komunikacyjne</li>
+            <li>miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
+            <li>parking dla tirów</li>
+            <li>dogodny dojazd do drogi krajowej nr 9</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h3>Place i bezpieczeństwo</h3>
+          <ul>
+            <li>place składowe o powierzchni blisko 5800 m²</li>
+            <li>teren utwardzony geokratą</li>
+            <li>monitoring całego obiektu</li>
+            <li>oświetlenie terenu zewnętrznego</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div class="photo photo3"></div>
   </div>
 
   <div class="location">
