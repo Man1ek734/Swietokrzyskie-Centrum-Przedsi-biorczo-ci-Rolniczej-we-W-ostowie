@@ -6,7 +6,11 @@
 <title>Inkubator Przemysłowy</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:Arial,sans-serif;
@@ -31,6 +35,11 @@ header{
   align-items:center;
   gap:18px;
   text-decoration:none;
+  transition:0.3s;
+}
+
+.logo:hover{
+  transform:scale(1.03);
 }
 
 .logo img{
@@ -60,6 +69,15 @@ nav a{
   color:#0b2447;
   font-weight:bold;
   font-size:18px;
+  transition:0.3s;
+  padding:10px 12px;
+  border-radius:14px;
+}
+
+nav a:hover{
+  color:#e9a722;
+  background:#f5f7fb;
+  transform:scale(1.08);
 }
 
 .btn{
@@ -70,6 +88,13 @@ nav a{
   border-radius:35px;
   font-weight:bold;
   white-space:nowrap;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 10px 25px rgba(233,167,34,0.35);
 }
 
 .page{
@@ -120,17 +145,17 @@ nav a{
   background-position:center;
   border-top-left-radius:180px;
   border-bottom-left-radius:180px;
+  transition:0.4s;
+}
+
+.hero-image:hover{
+  transform:scale(1.03);
 }
 
 .row{
   display:grid;
   grid-template-columns:1fr 1fr;
   min-height:380px;
-  border-top:2px solid #e5e7eb;
-}
-
-.row-full{
-  display:block;
   border-top:2px solid #e5e7eb;
 }
 
@@ -143,6 +168,12 @@ nav a{
   padding:16px 22px;
   border-radius:18px;
   margin-bottom:25px;
+  transition:0.3s;
+}
+
+.title:hover{
+  transform:translateX(8px);
+  background:#e8eef8;
 }
 
 .title h2{
@@ -176,10 +207,26 @@ nav a{
   min-height:380px;
   background-size:cover;
   background-position:center;
+  transition:0.4s;
+}
+
+.photo:hover{
+  transform:scale(1.025);
 }
 
 .photo1{
   background-image:url("inkubator5.png");
+}
+
+.full-section{
+  border-top:2px solid #e5e7eb;
+  padding:45px;
+}
+
+.full-section p{
+  font-size:20px;
+  line-height:1.7;
+  margin-bottom:18px;
 }
 
 .info-grid{
@@ -194,11 +241,28 @@ nav a{
   border-radius:22px;
   padding:28px;
   border-left:5px solid #e9a722;
+  transition:0.3s;
+}
+
+.info-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.08);
 }
 
 .info-box h3{
-  margin-top:0;
+  color:#003b7a;
+  font-size:23px;
   margin-bottom:15px;
+}
+
+.info-box ul{
+  padding-left:22px;
+}
+
+.info-box li{
+  font-size:19px;
+  line-height:1.6;
+  margin-bottom:8px;
 }
 
 .location{
@@ -220,6 +284,12 @@ nav a{
   margin-bottom:25px;
   font-size:19px;
   line-height:1.7;
+  transition:0.3s;
+}
+
+.address-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .map-btn{
@@ -230,6 +300,12 @@ nav a{
   border-radius:30px;
   font-weight:bold;
   display:inline-block;
+  transition:0.3s;
+}
+
+.map-btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 10px 25px rgba(233,167,34,0.35);
 }
 
 .footer{
@@ -367,72 +443,68 @@ nav a{
     <div class="photo photo1"></div>
   </div>
 
-  <div class="row-full">
-    <div class="text">
-      <div class="title">
-        <h2>🏢 Budynek administracyjny</h2>
+  <div class="full-section">
+    <div class="title">
+      <h2>🏢 Budynek administracyjny</h2>
+    </div>
+
+    <p>
+      Budynek socjalno-administracyjny o powierzchni 383 m² został
+      przygotowany z myślą o wygodnej obsłudze przedsiębiorców
+      korzystających z Inkubatora Przemysłowego.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Pomieszczenia biurowe</h3>
+        <ul>
+          <li>klimatyzowane pomieszczenia biurowe</li>
+          <li>powierzchnie biurowe o łącznej wielkości 70 m²</li>
+          <li>nowoczesna infrastruktura techniczna</li>
+        </ul>
       </div>
 
-      <p>
-        Budynek socjalno-administracyjny o powierzchni 383 m² został
-        przygotowany z myślą o wygodnej obsłudze przedsiębiorców
-        korzystających z Inkubatora Przemysłowego.
-      </p>
-
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>Pomieszczenia biurowe</h3>
-          <ul>
-            <li>klimatyzowane pomieszczenia biurowe</li>
-            <li>powierzchnie biurowe o łącznej wielkości 70 m²</li>
-            <li>nowoczesna infrastruktura techniczna</li>
-          </ul>
-        </div>
-
-        <div class="info-box">
-          <h3>Zaplecze dla firm</h3>
-          <ul>
-            <li>sala konferencyjna o powierzchni 50 m²</li>
-            <li>zaplecze socjalne dla najemców</li>
-            <li>warunki do prowadzenia spotkań i obsługi firm</li>
-          </ul>
-        </div>
+      <div class="info-box">
+        <h3>Zaplecze dla firm</h3>
+        <ul>
+          <li>sala konferencyjna o powierzchni 50 m²</li>
+          <li>zaplecze socjalne dla najemców</li>
+          <li>warunki do prowadzenia spotkań i obsługi firm</li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <div class="row-full">
-    <div class="text">
-      <div class="title">
-        <h2>🚛 Teren zewnętrzny</h2>
+  <div class="full-section">
+    <div class="title">
+      <h2>🚛 Teren zewnętrzny</h2>
+    </div>
+
+    <p>
+      Teren wokół Inkubatora został przygotowany z myślą o sprawnej
+      obsłudze logistycznej, komforcie użytkowników oraz wygodnym
+      dostępie do infrastruktury przemysłowej.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <h3>Komunikacja i parkingi</h3>
+        <ul>
+          <li>ciągi komunikacyjne</li>
+          <li>miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
+          <li>parking dla tirów</li>
+          <li>dogodny dojazd do drogi krajowej nr 9</li>
+        </ul>
       </div>
 
-      <p>
-        Teren wokół Inkubatora został przygotowany z myślą o sprawnej
-        obsłudze logistycznej, komforcie użytkowników oraz wygodnym
-        dostępie do infrastruktury przemysłowej.
-      </p>
-
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>Komunikacja i parkingi</h3>
-          <ul>
-            <li>ciągi komunikacyjne</li>
-            <li>miejsca parkingowe dla samochodów osobowych i ciężarowych</li>
-            <li>parking dla tirów</li>
-            <li>dogodny dojazd do drogi krajowej nr 9</li>
-          </ul>
-        </div>
-
-        <div class="info-box">
-          <h3>Place i bezpieczeństwo</h3>
-          <ul>
-            <li>place składowe o powierzchni blisko 5800 m²</li>
-            <li>teren utwardzony geokratą</li>
-            <li>monitoring całego obiektu</li>
-            <li>oświetlenie terenu zewnętrznego</li>
-          </ul>
-        </div>
+      <div class="info-box">
+        <h3>Place i bezpieczeństwo</h3>
+        <ul>
+          <li>place składowe o powierzchni blisko 5800 m²</li>
+          <li>teren utwardzony geokratą</li>
+          <li>monitoring całego obiektu</li>
+          <li>oświetlenie terenu zewnętrznego</li>
+        </ul>
       </div>
     </div>
   </div>
