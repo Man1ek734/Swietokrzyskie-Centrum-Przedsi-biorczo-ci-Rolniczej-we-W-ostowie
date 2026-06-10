@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufaktura</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#0b2447;
+}
+
+header{
+  max-width:1450px;
+  margin:25px auto;
+  background:white;
+  border-radius:40px;
+  padding:20px 45px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
 .logo{
   display:flex;
   align-items:center;
@@ -78,3 +106,241 @@ nav a:hover{
   transform:scale(1.07);
   box-shadow:0 10px 25px rgba(233,167,34,0.35);
 }
+
+.hero{
+  max-width:1450px;
+  margin:25px auto;
+  background:linear-gradient(135deg,#003b7a,#0057a8);
+  border-radius:45px;
+  overflow:hidden;
+  display:flex;
+  min-height:430px;
+  color:white;
+}
+
+.hero-left{
+  width:50%;
+  padding:65px;
+}
+
+.hero-left span{
+  color:#f0b323;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.hero-left h1{
+  font-size:58px;
+  line-height:1.1;
+  margin:25px 0;
+}
+
+.line{
+  width:90px;
+  height:4px;
+  background:#f0b323;
+  border-radius:10px;
+  margin-bottom:30px;
+}
+
+.hero-left p{
+  font-size:23px;
+  line-height:1.8;
+}
+
+.hero-right{
+  width:50%;
+  background:url("Manufaktura1.png");
+  background-size:cover;
+  background-position:center;
+  border-top-left-radius:180px;
+  border-bottom-left-radius:180px;
+}
+
+.section{
+  max-width:1450px;
+  margin:50px auto;
+  text-align:center;
+}
+
+.section h2{
+  font-size:44px;
+  color:#003b7a;
+  margin-bottom:15px;
+}
+
+.cards{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.card{
+  background:white;
+  border-radius:35px;
+  padding:45px 30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.icon{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  background:#edf4ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 25px;
+  font-size:38px;
+}
+
+.card h3{
+  color:#003b7a;
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.card p{
+  font-size:20px;
+  line-height:1.7;
+}
+
+.info{
+  max-width:1450px;
+  margin:50px auto;
+  background:white;
+  border-radius:45px;
+  padding:55px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.info h2{
+  color:#003b7a;
+  font-size:42px;
+  margin-bottom:25px;
+}
+
+.info p{
+  font-size:22px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+footer{
+  max-width:1450px;
+  margin:50px auto 25px;
+  background:#003b7a;
+  border-radius:40px;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
+
+footer p{
+  margin-top:12px;
+  color:#dbeafe;
+}
+
+@media(max-width:1200px){
+  header{flex-direction:column;gap:20px}
+  nav{flex-wrap:wrap;justify-content:center}
+  .hero{flex-direction:column}
+  .hero-left,.hero-right{width:100%}
+  .hero-right{height:300px;border-radius:0}
+  .cards{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png.png" alt="Logo Powiatu">
+
+    <div>
+      <div class="big-text">Powiat Opatowski</div>
+    </div>
+  </a>
+
+  <nav>
+    <a href="onas.html">O nas</a>
+    <a href="inkubator.html">Inkubator Przemysłowy</a>
+    <a href="manufaktura.html">Manufaktura</a>
+  </nav>
+
+  <a href="kontakt.html" class="btn">Skontaktuj się</a>
+</header>
+
+<div class="hero">
+  <div class="hero-left">
+    <span>MANUFAKTURA</span>
+
+    <h1>Manufaktura Mąki i Kaszy we Włostowie</h1>
+
+    <div class="line"></div>
+
+    <p>
+      Lokalna przestrzeń łącząca tradycję, jakość
+      oraz nowoczesne podejście do przetwórstwa zbóż.
+      Wspieramy regionalnych producentów i promujemy
+      produkty pochodzące z Powiatu Opatowskiego.
+    </p>
+  </div>
+
+  <div class="hero-right"></div>
+</div>
+
+<section class="section">
+  <h2>Nasza oferta</h2>
+  <div class="line" style="margin:0 auto 35px;"></div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🌾</div>
+      <h3>Mąki regionalne</h3>
+      <p>Produkty tworzone z lokalnych zbóż oraz surowców wysokiej jakości.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥣</div>
+      <h3>Kasze</h3>
+      <p>Tradycyjne produkty zbożowe przygotowywane z myślą o lokalnym rynku.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Współpraca</h3>
+      <p>Wspieramy rolników, przedsiębiorców i inicjatywy gospodarcze regionu.</p>
+    </div>
+  </div>
+</section>
+
+<div class="info">
+  <h2>O manufakturze</h2>
+
+  <p>
+    Manufaktura Mąki i Kaszy we Włostowie to miejsce,
+    które łączy tradycyjne metody przetwórstwa zbóż
+    z nowoczesnym podejściem do produkcji żywności.
+  </p>
+
+  <p>
+    Celem manufaktury jest promocja lokalnych produktów,
+    wspieranie rolników oraz rozwój regionalnej gospodarki.
+  </p>
+</div>
+
+<footer>
+  <h3>Powiat Opatowski</h3>
+  <p>© 2025 Wszystkie prawa zastrzeżone</p>
+</footer>
+
+</body>
+</html>
