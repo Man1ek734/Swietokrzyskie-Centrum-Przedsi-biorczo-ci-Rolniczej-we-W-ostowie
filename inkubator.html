@@ -261,6 +261,53 @@ nav a:hover{
   .footer{grid-template-columns:1fr}
   .hero-text h1{font-size:42px}
 }
+  .location-section{
+    margin:30px 0;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.map-btn{
+    background:#e9a722;
+    color:white;
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:30px;
+    font-weight:bold;
+    display:inline-block;
+    transition:0.3s ease;
+}
+
+.map-btn:hover{
+    transform:scale(1.07);
+    box-shadow:0 10px 25px rgba(233,167,34,0.35);
+}
+
+.footer{
+    background:#002b7f;
+    color:white;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+    border-radius:0 0 30px 30px;
+}
+
+.footer-column{
+    flex:1;
+    min-width:250px;
+}
+
+.footer-column h3{
+    margin-bottom:15px;
+}
+
+.footer-column p{
+    margin:6px 0;
+    color:#ffffff;
+}
 </style>
 </head>
 
@@ -409,44 +456,40 @@ nav a:hover{
     Powiat Opatowski
 </div>
 
-<a href="https://maps.app.goo.gl/15w2LTt6h1XzzS7k8?g_st=ifm"
-   target="_blank"
-   class="map-btn">
-   📍 Zobacz lokalizację na mapie
-</a>
+  <a href="https://maps.app.goo.gl/15w2LTt6h1XzzS7k8?g_st=ifm"
+       target="_blank"
+       class="map-btn">
+       📍 Zobacz lokalizację na mapie
+    </a>
 
-<br><br>
-
-<a href="rzuty.html"
-   class="map-btn">
-   📐 Zobacz rzuty pomieszczeń
-</a>
-        <h3>Starostwo Powiatowe w Opatowie</h3>
-        <p>Administratorem Inkubatora jest Starostwo Powiatowe w Opatowie.</p>
-      </div>
-    </div>
-
-    <div>
-      <h3>Kontakt</h3>
-      <p>
-        +48 15 868 29 71<br>
-        powiat@opatow.pl<br>
-        ul. Henryka Sienkiewicza 17,<br>
-        27-500 Opatów
-      </p>
-    </div>
-
-    <div>
-      <h3>ePUAP</h3>
-      <p>
-        /fooB52g0AM/skrytkaESP<br>
-        Adres skrzynki E-DORĘCZEŃ:<br>
-        AE:PL-34526-65838-GRGJD-42
-      </p>
-    </div>
-  </div>
+    <a href="rzuty.html"
+       class="map-btn">
+       📐 Zobacz rzuty pomieszczeń
+    </a>
 
 </div>
 
-</body>
-</html>
+<footer class="footer">
+
+    <div class="footer-column">
+        <img src="logo.png.png" alt="Logo" style="height:70px;">
+        <h3>Powiat Opatowski</h3>
+        <p>Administratorem Inkubatora jest Powiat Opatowski.</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>Kontakt</h3>
+        <p>+48 15 868 29 71</p>
+        <p>powiat@opatow.pl</p>
+        <p>ul. Henryka Sienkiewicza 17</p>
+        <p>27-500 Opatów</p>
+    </div>
+
+    <div class="footer-column">
+        <h3>ePUAP</h3>
+        <p>/fooB52g0AM/skrytkaESP</p>
+        <p>Adres skrzynki E-DORĘCZEŃ:</p>
+        <p>AE:PL-34526-65838-GRGJD-42</p>
+    </div>
+
+</footer>
