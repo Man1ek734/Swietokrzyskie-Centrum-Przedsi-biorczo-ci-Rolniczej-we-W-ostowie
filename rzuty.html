@@ -3,22 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rzuty pomieszczeń i terenu</title>
+<title>Rzuty</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#0b2447;
+}
+
+header{
+  max-width:1450px;
+  margin:25px auto;
+  background:white;
+  border-radius:40px;
+  padding:20px 45px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.logo:hover{transform:scale(1.03)}
+
+.logo img{height:75px}
+
+.big-text{
+  color:#003b7a;
+  font-size:34px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  gap:35px;
+  align-items:center;
+}
+
+nav a{
+  text-decoration:none;
+  color:#0b2447;
+  font-weight:bold;
+  font-size:18px;
+  padding:10px 12px;
+  border-radius:14px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#e9a722;
+  background:#f5f7fb;
+  transform:scale(1.08);
+}
+
+.btn{
+  background:#e9a722;
+  color:white;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:35px;
+  font-weight:bold;
+  display:inline-block;
+  white-space:nowrap;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 10px 25px rgba(233,167,34,.35);
+}
+
+.hero{
+  max-width:1450px;
+  margin:25px auto;
+  background:linear-gradient(135deg,#003b7a,#0057a8);
+  color:white;
+  border-radius:55px;
+  padding:80px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+.hero span{
+  color:#f0b323;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.hero h1{
+  font-size:58px;
+  margin:25px 0;
+}
+
+.line{
+  width:90px;
+  height:4px;
+  background:#f0b323;
+  border-radius:10px;
+  margin-bottom:30px;
+}
+
+.hero p{
+  font-size:23px;
+  line-height:1.8;
+  max-width:900px;
+}
+
+.section{
+  max-width:1450px;
+  margin:50px auto;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:35px;
+  padding:40px 28px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.icon{
+  width:85px;
+  height:85px;
+  border-radius:50%;
+  background:#edf4ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 25px;
+  font-size:38px;
+}
+
+.card h2{
+  color:#003b7a;
+  font-size:25px;
+  margin-bottom:18px;
+}
+
+.card p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:25px;
+}
+
+footer{
+  max-width:1450px;
+  margin:50px auto 25px;
+  background:#003b7a;
+  border-radius:40px;
+  color:white;
+  text-align:center;
+  padding:40px;
+}
+
+footer p{
+  margin-top:12px;
+  color:#dbeafe;
+}
+
+@media(max-width:1100px){
+  header{flex-direction:column;gap:20px}
+  nav{flex-wrap:wrap;justify-content:center}
+  .cards{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+}
+</style>
 </head>
+
 <body>
 
-<h1>Rzuty pomieszczeń i terenu</h1>
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png.png" alt="Logo Powiatu">
+    <div class="big-text">Powiat Opatowski</div>
+  </a>
 
-<p>Tutaj zostaną dodane rzuty pomieszczeń oraz terenu Inkubatora Przemysłowego.</p>
+  <nav>
+    <a href="onas.html">O nas</a>
+    <a href="inkubator.html">Inkubator Przemysłowy</a>
+    <a href="manufaktura.html">Manufaktura</a>
+  </nav>
 
-<ul>
-  <li>Hala produkcyjna 1 - rzut parteru</li>
-  <li>Hala produkcyjna 2 z budynkiem socjalno-administracyjnym - rzut parteru</li>
-  <li>Hala produkcyjna 2 - projekt podziału hali</li>
-  <li>Teren - parkingi, miejsca składowe</li>
-</ul>
+  <a href="kontakt.html" class="btn">Skontaktuj się</a>
+</header>
 
-<a href="inkubator.html">Wróć do Inkubatora</a>
+<div class="hero">
+  <span>RZUTY</span>
+  <h1>Rzuty pomieszczeń i terenu</h1>
+  <div class="line"></div>
+  <p>
+    W tym miejscu znajdą się rzuty hal, pomieszczeń administracyjnych
+    oraz terenu Inkubatora Przemysłowego we Włostowie.
+  </p>
+</div>
+
+<div class="section">
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <h2>Hala produkcyjna 1</h2>
+      <p>Rzut parteru hali produkcyjno-magazynowej.</p>
+      <a href="#" class="btn">Zobacz rzut</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏢</div>
+      <h2>Hala 2 + budynek</h2>
+      <p>Rzut hali produkcyjnej oraz części socjalno-administracyjnej.</p>
+      <a href="#" class="btn">Zobacz rzut</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📐</div>
+      <h2>Podział hali</h2>
+      <p>Projekt podziału hali produkcyjnej na pomieszczenia.</p>
+      <a href="#" class="btn">Zobacz rzut</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🅿️</div>
+      <h2>Teren zewnętrzny</h2>
+      <p>Rzut parkingów, placów składowych i układu komunikacyjnego.</p>
+      <a href="#" class="btn">Zobacz rzut</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <h3>Powiat Opatowski</h3>
+  <p>© 2025 Wszystkie prawa zastrzeżone</p>
+</footer>
 
 </body>
 </html>
